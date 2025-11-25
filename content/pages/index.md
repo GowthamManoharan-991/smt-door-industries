@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: Quality Timber Products for your Projects
+      text: SMT Door Industries
       color: text-dark
       type: TitleBlock
     subtitle: Subtitle goes here
