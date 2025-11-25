@@ -32,9 +32,10 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: /images/main-hero.svg
+      url: images\wood entrance doors.jpeg
       altText: SMT your team boost your time to production preview
       elementId: ''
+
       type: ImageBlock
     badge:
       label: This is a badge
@@ -46,11 +47,12 @@ sections:
       self:
         alignItems: center
         flexDirection: row
+        height: screen
         padding:
-          - pt-16
+          - pt-0
           - pl-16
-          - pb-16
-          - pr-16
+          - pb-0
+          - pr-0
   - type: FeaturedItemsSection
     title:
       text: Key Benefits

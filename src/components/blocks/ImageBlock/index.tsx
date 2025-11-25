@@ -40,6 +40,8 @@ export default function ImageBlock(props) {
                 )}
                 src={url}
                 alt={altText}
+                className="w-full h-auto object-cover max-h-[600px]"
+
             />
         </div>
     );
