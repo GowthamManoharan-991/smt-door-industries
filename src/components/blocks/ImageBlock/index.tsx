@@ -26,22 +26,9 @@ export default function ImageBlock(props) {
         >
             <img
                 id={elementId}
-                className={classNames(
-                    imageClassName,
-                    styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : undefined,
-                    styles?.self?.borderWidth && styles?.self?.borderWidth !== 0 && styles?.self?.borderStyle !== 'none'
-                        ? mapStyles({
-                              borderWidth: styles?.self?.borderWidth,
-                              borderStyle: styles?.self?.borderStyle,
-                              borderColor: styles?.self?.borderColor ?? 'border-primary'
-                          })
-                        : undefined,
-                    styles?.self?.borderRadius ? mapStyles({ borderRadius: styles?.self?.borderRadius }) : undefined
-                )}
                 src={url}
                 alt={altText}
-                className="w-full h-auto object-cover max-h-[600px]"
-
+                className="w-full object-cover"
             />
         </div>
     );
