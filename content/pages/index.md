@@ -4,7 +4,7 @@ slug: /
 sections:
   - type: GenericSection
     title:
-      text: SMT Door Industries
+      text: SMT Door Industries Hai
       color: text-dark
       type: TitleBlock
     subtitle: Subtitle goes here
