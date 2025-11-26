@@ -35,7 +35,6 @@ sections:
       url: /images/wood entrance doors.jpeg
       altText: SMT your team boost your time to production preview
       elementId: ''
-
       type: ImageBlock
     badge:
       label: This is a badge
