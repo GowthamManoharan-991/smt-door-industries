@@ -32,7 +32,7 @@ sections:
         elementId: ''
         type: Link
     media:
-      url: images\wood entrance doors.jpeg
+      url: /images/wood entrance doors.jpeg
       altText: SMT your team boost your time to production preview
       elementId: ''
 
