@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
 
+
 /**
  * The getComponent() function loads a component using dynamic import.
  *
@@ -35,6 +36,7 @@ const components = {
     CarouselSection: dynamic(() => import('./sections/CarouselSection')),
     CheckboxFormControl: dynamic(() => import('./blocks/FormBlock/CheckboxFormControl')),
     DividerSection: dynamic(() => import('./sections/DividerSection')),
+    HeroSection: dynamic(() => import('./sections/HeroSection')),
     EmailFormControl: dynamic(() => import('./blocks/FormBlock/EmailFormControl')),
     FeaturedItem: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItem')),
     FeaturedItemToggle: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItemToggle')),

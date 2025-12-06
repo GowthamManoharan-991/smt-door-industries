@@ -2,56 +2,59 @@
 title: Home
 slug: /
 sections:
-  - type: GenericSection
+  - type: HeroSection
+    elementId: hero-section
+    image:
+      - /images/Testing.jpg
+      - /images/wooden-door-frame.jpeg
+      - /images/wood-for-doors.jpeg
+      - /images/wooden-door-price.jpg
+      - /images/wood-entrance-doors.jpeg
+    colors: bg-none-fg-light
     title:
-      text: SMT Door Industries Hai
-      color: text-dark
+      text: Designing a Home, Creating a Living
+      color: text-light
       type: TitleBlock
-    subtitle: Subtitle goes here
+    subtitle: Your home deserves the best design.
     text: >
-      A Netlify Create website is a git repo that you own. Every code commit is
-      instantly reflected in the visual editor and since every visual edit is a
-      git commit, git workflows and collaboration just work.
+      Beautiful interiors crafted with precision and care.
     actions:
-      - label: Get started
-        altText: ''
+      - label: Contact Now
         url: /
-        showIcon: false
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        elementId: ''
-        type: Button
-      - label: See Tutorials
-        altText: ''
-        url: /
-        showIcon: true
-        icon: arrowRight
-        iconPosition: right
         style: primary
-        elementId: ''
-        type: Link
-    media:
-      url: /images/wood entrance doors.jpeg
-      altText: SMT your team boost your time to production preview
-      elementId: ''
-      type: ImageBlock
-    badge:
-      label: This is a badge
-      color: text-primary
-      type: Badge
-    elementId: ''
-    colors: bg-light-fg-dark
+        type: Button
+
+      - label: Learn More
+        url: /
+        style: Secondary
+        type: Button
+
     styles:
       self:
-        alignItems: center
-        flexDirection: row
-        height: screen
+        isHero: true
+        backgroundImage:
+          url: /images/Testing.jpg
+          altText: Hero background
+        backgroundSize: cover
+        backgroundPosition: center
+        backgroundRepeat: no-repeat
+        flexDirection: column
+        alignItems: flex-start
+        justifyContent: left
+        textAlign: left
+        height: full
+        minHeight: screen
         padding:
           - pt-0
-          - pl-16
+          - pl-0
           - pb-0
           - pr-0
+
+        borderRadius:
+          - none
+
+    media: null
+
   - type: FeaturedItemsSection
     title:
       text: Key Benefits
