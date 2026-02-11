@@ -325,3 +325,61 @@
         }
     }
 }
+
+/* Reduce image size ONLY in Featured Items grid */
+.featured-items-grid img {
+  max-height: 210px;
+  width: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional: smaller images on mobile */
+@media (max-width: 640px) {
+  .featured-items-grid img {
+    max-height: 80px;
+  }
+}
+
+/* Force placeholder visibility on dark backgrounds */
+.sb-input::placeholder {
+  color: #ffffff !important;
+  opacity: 0.85 !important;
+}
+
+/* Email specific */
+.sb-input[type="email"]::placeholder {
+  color: #ffffff !important;
+  opacity: 0.85 !important;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 800ms ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 700ms ease both;
+}

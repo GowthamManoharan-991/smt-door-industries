@@ -34,13 +34,23 @@ export default function TextFormControl(props) {
                 </label>
             )}
             <input
-                id={name}
-                className="sb-input text-inherit bg-transparent border-b border-current w-full py-2 focus:outline-none"
-                type="text"
-                name={name}
-                {...attr}
-                {...(fieldPath && { 'data-sb-field-path': '.name#@id .name#@name' })}
-            />
+    id={name}
+    type="text"
+    name={name}
+    className="
+        w-full
+        py-3
+        bg-transparent
+        text-white
+        placeholder-gray-300
+        border-b-2
+        border-white/50
+        focus:border-white
+        focus:outline-none
+    "
+    {...attr}
+/>
+
         </div>
     );
 }

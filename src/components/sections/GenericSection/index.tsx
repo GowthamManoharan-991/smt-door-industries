@@ -72,7 +72,7 @@ export default function GenericSection(props) {
             <div
                 className={classNames(
                     "relative z-10",
-                    "flex items-center justify-center min-h-[90vh] px-10"
+                    "flex items-center justify-center min-h-[60vh] px-4 sm:px-6 lg:px-10"
                 )}
             >
                 <div

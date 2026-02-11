@@ -1,102 +1,199 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import classNames from "classnames";
 
-type Props = {
-  image?: string[] | string;
-  title?: { text?: string };
-  subtitle?: any;
-  actions?: any[];
+import React, { useEffect, useState } from "react";
+
+/* ---------------- TYPES ---------------- */
+
+type HeroAction = {
+  label: string;
+  url: string;
 };
 
-export default function HeroSection({ image = [], title, subtitle, actions }: Props) {
-  // Netlify frontmatter often uses `image:` which can be string or array.
-  const images = Array.isArray(image) ? image : [image];
+type HeroSlide = {
+  image: string;
+  tag?: string;          // 👈 NEW (small word above heading)
+  title?: string;
+  subtitle?: string;
+  actions?: HeroAction[];
+};
 
-  // Debug: show what we actually received (open browser DevTools Console)
-  // eslint-disable-next-line no-console
-  console.log("IMAGES RECEIVED FROM YAML:", images);
+type Props = {
+  slides?: HeroSlide[];
+};
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+/* ---------------- COMPONENT ---------------- */
 
-  // Auto slideshow
+export default function HeroSection({ slides = [] }: Props) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  /* ---------------- AUTO SLIDESHOW ---------------- */
+
   useEffect(() => {
-    if (!images || images.length === 0) return;
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [images.length]);
+    if (!slides.length) return;
 
-  // No images -> render empty hero shell (still shows overlay/text)
-  if (!images || images.length === 0) {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) =>
+        prev === slides.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  /* ---------------- EMPTY STATE ---------------- */
+
+  if (!slides.length) {
     return (
-      <section className={classNames("relative w-full h-screen flex items-center")}>
+      <section
+        className="relative w-full overflow-hidden flex items-center"
+        style={{ height: "70vh" }}
+      >
         <div className="absolute inset-0 bg-gray-800" />
-        <div className="relative z-10 max-w-4xl pl-8 px-6 text-left text-white">
-          <h1 className="text-4xl font-bold">No hero images found</h1>
+        <div className="relative z-10 max-w-4xl px-8 text-white">
+          <h1 className="text-4xl font-bold">No hero slides found</h1>
         </div>
       </section>
     );
   }
 
+  const activeSlide = slides[currentIndex];
+
   return (
-    <section className={classNames("relative w-full h-screen overflow-hidden flex items-center")}>
-      {/* Fade + Slide stacked slides */}
-      <div className="absolute inset-0 overflow-hidden">
-        {images.map((img, index) => {
-          // numeric offset from current to compute horizontal shift
-          const offset = index - currentImageIndex;
+    <section className="relative w-full min-h-[80vh] lg:min-h-[90vh] overflow-hidden flex items-center bg-black">
 
-          // transformX in percent — keeps each slide exactly full width.
-          const translate = `${offset * 100}%`;
-
-          // Each slide is absolutely positioned and stacked.
-          const style: React.CSSProperties = {
-            backgroundImage: `url(${img})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            position: "absolute",
-            inset: 0,
-            // move each slide horizontally relative to the currently active one
-            transform: `translateX(${translate})`,
-            // fade active slide to 1, others to 0
-            opacity: index === currentImageIndex ? 1 : 0,
-            // handle transition for both transform and opacity
-            transition: "transform 1200ms ease, opacity 1200ms ease",
-            willChange: "transform, opacity",
-            pointerEvents: "none", // so content clickable
-          };
-
-          return <div key={index} style={style} />;
-        })}
+      {/* ---------------- BACKGROUND (FADE ONLY) ---------------- */}
+      <div className="absolute inset-0">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="hero-bg"
+            style={{
+              backgroundImage: `url(${slide.image})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition:
+                typeof window !== "undefined" && window.innerWidth < 640
+                  ? "100% center" // mobile – extreme right
+                  : "right center",
+              position: "absolute",
+              inset: 0,
+              opacity: index === currentIndex ? 1 : 0,
+              transition: "opacity 1000ms ease",
+              pointerEvents: "none",
+            }}
+          />
+        ))}
       </div>
 
-      {/* Optional overlay for readability */}
-      <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.45) 40%, rgba(0,0,0,0.0) 100%)" }} />
+      {/* ---------------- OVERLAY ---------------- */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0) 100%)",
+        }}
+      />
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl pl-32 pr-6 text-left text-white">
-        <h1 className="text-5xl font-bold leading-tight mb-6">{title?.text}</h1>
-        {subtitle && <p className="text-xl mb-8">{subtitle?.text || subtitle}</p>}
+      {/* ---------------- CONTENT ---------------- */}
+      <div
+        key={currentIndex}
+        className="
+          relative z-10 max-w-4xl
+          px-8
+          sm:px-8
+          lg:pl-32 lg:pr-6
+          text-left text-white
+          animate-fade-up
+        "
+      >
+        {/* ---------- SMALL TAG ABOVE HEADING ---------- */}
+        {activeSlide.tag && (
+          <div
+            className="mb-3 text-lg sm:text-sm lg:text-lg font-bold  tracking-[0.35em] sm:tracking-[0.25em] lg:tracking-[0.75em] uppercase"
+            style={{ color: "#C6B461" }}
+          >
+            {activeSlide.tag}
+          </div>
+        )}
 
+        {/* ---------- MAIN HEADING ---------- */}
+        {activeSlide.title && (
+          <h1
+            className="
+              block
+              text-4xl sm:text-4xl lg:text-5xl
+              font-bold
+              mb-6
+              px-6 py-4
+              border-2
+              whitespace-pre-line
+            "
+            style={{
+              fontFamily: "'Futura STD', sans-serif",
+              lineHeight: "1.4",          // ✅ reliable line-height
+              color: "#FFFFFF",
+              borderColor: "#C6B461",     // classy gold
+            }}
+          >
+            {activeSlide.title}
+          </h1>
+        )}
+
+        {/* ---------- SUBTITLE ---------- */}
+        {activeSlide.subtitle && (
+          <p className="text-base sm:text-lg lg:text-xl mb-8">
+            {activeSlide.subtitle}
+          </p>
+        )}
+
+        {/* ---------------- ACTIONS ---------------- */}
         <div className="flex items-center gap-4 mt-6">
-          {actions?.[0] && (
-            <a href={actions[0].url} className="bg-white text-black font-medium py-3 px-6 rounded-lg text-lg hover:bg-gray-200 transition">
-              {actions[0].label || "Get Started"}
+          {activeSlide.actions?.[0] && (
+            <a
+              href={activeSlide.actions[0].url}
+              className="bg-white text-black text-[15px] font-medium py-3.5 px-9 rounded-lg hover:bg-gray-200 transition"
+            >
+              {activeSlide.actions[0].label}
             </a>
           )}
-          {actions?.[1] && (
-            <a href={actions[1].url} className="inline-flex items-center gap-3 border border-white/40 text-white font-medium py-3 px-5 rounded-lg text-lg bg-white/5 hover:bg-white/10 transition">
-              <span>{actions[1].label || "Learn More"}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5" aria-hidden="true" >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5l6 6m0 0l-6 6m6-6H4.5" /> 
+
+          {activeSlide.actions?.[1] && (
+            <a
+              href={activeSlide.actions[1].url}
+              className="
+                group inline-flex items-center gap-3
+                px-7 py-3.5
+                rounded-[10px]
+                bg-white/10
+                border border-white/20
+                text-white text-[14px] sm:text-[14px] lg:text-[15px] font-medium
+                backdrop-blur-md
+                shadow-lg shadow-black/30
+                hover:bg-white/15 hover:border-white/40
+                transition-all duration-300
+              "
+            >
+              <span>{activeSlide.actions[1].label}</span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M13.5 4.5l6 6m0 0l-6 6m6-6H4.5"
+                />
               </svg>
             </a>
           )}
         </div>
 
-        {/* Stats */}
+        {/* ---------------- STATS ---------------- */}
         <div className="mt-12 flex items-center gap-12 text-white">
           <div className="flex items-start gap-4">
             <div className="w-[1.5px] h-14 bg-white/60" />

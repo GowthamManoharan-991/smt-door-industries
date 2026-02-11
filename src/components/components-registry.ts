@@ -2,6 +2,8 @@ import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
 
 
+
+
 /**
  * The getComponent() function loads a component using dynamic import.
  *
@@ -10,9 +12,20 @@ import { ComponentType } from 'react';
  * is bundled only when used.
  */
 
-export function getComponent(key: string): ComponentType {
-    return components[key];
+export function getComponent(input: any): ComponentType | null {
+    // If a string is passed (PageLayout, PostLayout, etc.)
+    if (typeof input === "string") {
+        return components[input] || null;
+    }
+
+    // If a section object is passed
+    const key =
+        input?.__metadata?.modelName ||
+        input?.type;
+
+    return components[key] || null;
 }
+
 
 /**
  * Map of dynamically imported components.
@@ -33,10 +46,13 @@ export function getComponent(key: string): ComponentType {
  */
 const components = {
     AutoCompletePosts: dynamic(() => import('./blocks/SearchBlock/AutoCompletePosts')),
+    CategoryGridSection: dynamic(() => import('./sections/CategoryGridSection')),
     CarouselSection: dynamic(() => import('./sections/CarouselSection')),
     CheckboxFormControl: dynamic(() => import('./blocks/FormBlock/CheckboxFormControl')),
     DividerSection: dynamic(() => import('./sections/DividerSection')),
     HeroSection: dynamic(() => import('./sections/HeroSection')),
+    HeroSubpages: dynamic(() => import('./sections/HeroSubpages')),
+    ProductTeak: dynamic(() => import('./sections/ProductTeak')),
     EmailFormControl: dynamic(() => import('./blocks/FormBlock/EmailFormControl')),
     FeaturedItem: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItem')),
     FeaturedItemToggle: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItemToggle')),
@@ -47,12 +63,19 @@ const components = {
     GenericSection: dynamic(() => import('./sections/GenericSection')),
     ImageBlock: dynamic(() => import('./blocks/ImageBlock')),
     ImageGallerySection: dynamic(() => import('./sections/ImageGallerySection')),
+    ManufacturingSection: dynamic(() => import('./sections/ManufacturingSection')),
+    TimberSawMillSection:dynamic(() => import('./sections/TimberSawMillSection')),
+    WhyChooseUsSection: dynamic(() => import('./sections/WhyChooseUsSection')),
     PostFeedSection: dynamic(() => import('./sections/PostFeedSection')),
     PricingSection: dynamic(() => import('./sections/PricingSection')),
     RecentPostsSection: dynamic(() => import('./sections/RecentPostsSection')),
     SelectFormControl: dynamic(() => import('./blocks/FormBlock/SelectFormControl')),
+    PhoneFormControl: dynamic(() => import('./blocks/FormBlock/PhoneFormControl')),
+    FormHeadingControl: dynamic(() => import('./blocks/FormBlock/FormHeadingControl')),
+    CategoryFormControl: dynamic(() => import('./blocks/FormBlock/CategoryFormControl')),
     TextareaFormControl: dynamic(() => import('./blocks/FormBlock/TextareaFormControl')),
     TextFormControl: dynamic(() => import('./blocks/FormBlock/TextFormControl')),
+    TestimonialCarousel: dynamic(() => import('./TestimonialCarousel')),
     VideoBlock: dynamic(() => import('./blocks/VideoBlock')),
     PageLayout: dynamic(() => import('./layouts/PageLayout')),
     PostLayout: dynamic(() => import('./layouts/PostLayout')),

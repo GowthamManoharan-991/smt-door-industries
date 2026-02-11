@@ -4,37 +4,62 @@ slug: /
 sections:
   - type: HeroSection
     elementId: hero-section
-    image:
-      - /images/Testing.jpg
-      - /images/wooden-door-frame.jpeg
-      - /images/wood-for-doors.jpeg
-      - /images/wooden-door-price.jpg
-      - /images/wood-entrance-doors.jpeg
-    colors: bg-none-fg-light
-    title:
-      text: Designing a Home, Creating a Living
-      color: text-light
-      type: TitleBlock
-    subtitle: Your home deserves the best design.
-    text: >
-      Beautiful interiors crafted with precision and care.
-    actions:
-      - label: Contact Now
-        url: /
-        style: primary
-        type: Button
+    slides:
+      - image: /images/Hero1.png
+        tag: PREMIUM
+        title: Designing a Home, Creating a Living
+        subtitle: Your home deserves the best design.
+        actions:
+          - label: Contact Now
+            url: /
+          - label: Learn More
+            url: /
 
-      - label: Learn More
-        url: /
-        style: Secondary
-        type: Button
+      - image: /images/Hero2.png
+        tag: CRAFTED
+        title: Elegant Interiors Crafted with Care
+        subtitle: Beautiful interiors crafted with precision and care.
+        actions:
+          - label: Contact Now
+            url: /
+          - label: Learn More
+            url: /
+
+      - image: /images/Hero3.png
+        tag: BESPOKE
+        title: Spaces That Reflect Your Lifestyle
+        subtitle: Smart, modern, and functional home designs.
+        actions:
+          - label: Contact Now
+            url: /
+          - label: Learn More
+            url: /
+
+      - image: /images/Hero4.png
+        tag: ENGINEERED
+        title: Where Comfort Meets Style
+        subtitle: Thoughtfully designed interiors for modern living.
+        actions:
+          - label: Contact Now
+            url: /
+          - label: Learn More
+            url: /
+
+      - image: /images/Hero5.png
+        tag: HERITAGE
+        title: Turn Your Dream Home into Reality
+        subtitle: Premium designs tailored just for you.
+        actions:
+          - label: Contact Now
+            url: /
+          - label: Learn More
+            url: /
+
+    colors: bg-none-fg-light
 
     styles:
       self:
         isHero: true
-        backgroundImage:
-          url: /images/Testing.jpg
-          altText: Hero background
         backgroundSize: cover
         backgroundPosition: center
         backgroundRepeat: no-repeat
@@ -55,231 +80,188 @@ sections:
 
     media: null
 
-  - type: FeaturedItemsSection
+  - type: GenericSection
+    elementId: about-us
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-24
+          - pb-0
+          - pl-12
+          - pr-12
+        maxHeight: 220px
+        alignItems: center
+        justifyContent: space-between
+        flexDirection: row
+
     title:
-      text: Key Benefits
-      color: text-dark
-      styles:
-        self:
-          textAlign: center
       type: TitleBlock
-    subtitle: Subtitle goes here
-    items:
-      - type: FeaturedItem
-        title: 500k
-        subtitle: Numbers Done
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        actions: []
-        elementId: null
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: row
-            justifyContent: center
-            textAlign: left
-        image:
-          type: ImageBlock
-          altText: Lightning bolt symbol on red background
-          elementId: ''
-          url: /images/icon1.svg
-          styles:
-            self:
-              borderRadius: x-large
-      - title: 20x
-        subtitle: The Job Stuff
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/icon2.svg
-          altText: Featured icon two
-          elementId: ''
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: row
-            textAlign: left
-            justifyContent: center
-        type: FeaturedItem
-      - title: 200%
-        subtitle: Faster
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/icon3.svg
-          altText: Featured icon three
-          elementId: ''
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: row
-        type: FeaturedItem
+      text: A Trendy Doors For Trendy Home
+      color: text-dark
+
+    subtitle: ''
+
+    text: >
+      We are committed to providing our customers with exceptional quality doors
+      that combine modern design, durability, and precision craftsmanship. With
+      decades of manufacturing experience, we focus on delivering doors that
+      enhance both residential and commercial spaces.<br>
+
+      Our commitment to quality materials, advanced production methods, and
+      customer satisfaction has made us a trusted name in the door manufacturing
+      industry.
+
     actions:
-      - label: Get started
-        altText: ''
-        url: /
-        showIcon: false
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        elementId: ''
-        type: Button
-    badge:
-      label: This is a badge
-      color: text-primary
-      styles:
-        self:
-          textAlign: center
-      type: Badge
-    elementId: ''
-    variant: three-col-grid
-    colors: bg-neutral-fg-dark
-    styles:
-      self:
-        padding:
-          - pb-16
-          - pt-16
-          - pl-16
-          - pr-16
-        justifyContent: center
-      subtitle:
-        textAlign: center
-  - subtitle: Award winning enterprises trust us
-    images:
-      - url: /images/empathy-logo.svg
-        altText: Empathy logo
-        type: ImageBlock
-      - url: /images/wellster-logo.svg
-        altText: Wellster logo
-        type: ImageBlock
-      - url: /images/vise-logo.svg
-        altText: Vise logo
-        type: ImageBlock
-      - url: /images/telus-logo.svg
-        altText: Telus logo
-        type: ImageBlock
-      - url: /images/contenful-logo.svg
-        altText: Contentful logo
-        type: ImageBlock
-      - url: /images/sanity-logo.svg
-        altText: Sanity logo
-        type: ImageBlock
-      - url: /images/rangle-logo.svg
-        altText: Rangle logo
-        type: ImageBlock
-    motion: move-to-left
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        justifyContent: center
-      subtitle:
-        textAlign: center
-    type: ImageGallerySection
-  - posts:
-      - content/pages/blog/case-study-1.md
-      - content/pages/blog/case-study-2.md
-      - content/pages/blog/case-study-3.md
-    showThumbnail: true
-    showDate: true
-    showAuthor: true
-    variant: three-col-grid
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-16
-          - pl-16
-          - pb-16
-          - pr-16
-        justifyContent: center
-    type: FeaturedPostsSection
-    hoverEffect: move-up
-  - title: Divider
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-7
-          - pl-7
-          - pb-7
-          - pr-7
-    type: DividerSection
-  - title:
-      text: Grow your business 10x faster
-      color: text-dark
-      styles:
-        self:
-          textAlign: center
-      type: TitleBlock
-    subtitle: This is a subtitle
-    text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+      - type: Button
+        label: Know More
+        url: /about
+        style: secondary
+
     media:
-      title: Title of the video
-      url: /images/placeholder-video.mp4
-      controls: false
-      aspectRatio: '16:9'
+      type: ImageBlock
+      url: /images/About.png
+      altText: Premium Door Collection
       styles:
-        self:
-          padding:
-            - pt-2
-            - pb-2
-            - pl-2
-            - pr-2
-          borderColor: border-dark
-          borderStyle: solid
-          borderWidth: 1
-          borderRadius: large
-      type: VideoBlock
-      autoplay: true
-      loop: true
-      muted: true
+      self:
+        position: relative
+
     badge:
-      label: Key Benefits
+      label: About Us
       color: text-primary
       styles:
         self:
-          textAlign: center
-      type: Badge
-    colors: bg-light-fg-dark
+          textAlign: left
+
+  - type: CategoryGridSection
+    heading:
+      eyebrow: Architectural Excellence
+      title: Find the Perfect Fit for Your Home
+      subtitle:
+
     styles:
       self:
-        flexDirection: col
-        justifyContent: center
-      subtitle:
-        textAlign: center
-    type: GenericSection
+        padding:
+          - pt-16
+          - pb-16
+
+    items:
+      # ROW 1
+      - title: Teak Wood Door
+        subtitle: Premium quality teak doors crafted for Indian homes
+        span: 2
+        split: true
+        backgroundColor: '#e6f4fb'
+        image:
+          type: ImageBlock
+          url: /images/Ca2.png
+          altText: Teak Wood Door
+        actions:
+          - type: Action
+            label: Shop Now
+            style: primary
+            url: /sofa
+
+      - title: Mahagony Wood Doors
+        subtitle: Main Entrance Doors
+        span: 1
+        image:
+          type: ImageBlock
+          url: /images/Ca3.png
+          altText: Sneakers
+        actions:
+          - type: Action
+            label: Shop Now
+            style: primary
+            url: /sneakers
+
+      - title: Bedroom Doors
+        subtitle: Membrane Doors
+        span: 1
+        image:
+          type: ImageBlock
+          url: /images/Ca5.png
+          altText: Door
+        actions:
+          - type: Action
+            label: Shop Now
+            style: primary
+            url: /toys
+
+      # ROW 2
+      - title: UPVC Door
+        subtitle: Balcony Modern Doors
+        span: 1
+        image:
+          type: ImageBlock
+          url: /images/Ca6.png
+          altText: Toy Train
+        actions:
+          - type: Action
+            label: Shop Now
+            style: primary
+            url: /toys
+
+      - title: WPC Doors
+        subtitle: Waterproof Bathroom Doors
+        span: 1
+        image:
+          type: ImageBlock
+          url: /images/Ca8.png
+          altText: Toy Train
+        actions:
+          - type: Action
+            label: Shop Now
+            style: primary
+            url: /toys
+
+      - title: Pooja Room Doors
+        subtitle: Teak door with brass patterns and small bells (mani)
+        span: 2
+        split: true
+        image:
+          type: ImageBlock
+          url: /images/Ca4.png
+          altText: Toy Train
+        actions:
+          - type: Action
+            label: Shop Now
+            style: primary
+            url: /toys
+
+  - type: TimberSawMillSection
+    eyebrow: Timber & Saw Mill
+
+    title: >
+      Your Vision Our Expertise
+      Your Success Get Noticed Generate Leads Dominate.
+
+    description: >
+      Timber sourced responsibly and processed in our own saw mill using
+      modern machinery. From raw logs to premium doors, every step follows
+      strict quality standards to ensure durability and elegance.
+
+    stats:
+      - value: '10k+'
+        label: Completed Projects
+      - value: '15k+'
+        label: Happy Clients
+      - value: '10k+'
+        label: Custom Doors
+      - value: '45+'
+        label: Skilled Workers
+
+    images:
+      main:
+        src: /images/timber2.webp
+        alt: Timber processing
+      top:
+        src: /images/timber1.webp
+        alt: Saw mill cutting
+      bottom:
+        src: /images/timber3.jpg
+        alt: Door manufacturing
+
   - type: GenericSection
     title:
       text: Generic section with a video
@@ -315,433 +297,346 @@ sections:
           borderWidth: 1
           borderRadius: large
       type: VideoBlock
-    elementId: null
+
+  - type: WhyChooseUsSection
+    eyebrow: WHY CHOOSE US
+    title: 26 Years of Experience
+    subtitle: >
+      Our templates allow for maximum customization.
+    items:
+      - title: Own Timber Yard & Saw Mill
+        description: Tailor your landing page’s look and feel.
+        icon: speaker
+      - title: Premium Wood Quality
+        description: >
+          We build our templates for speed in mind, for super-fast load times so your
+          customers never waver.
+        icon: zap
+      - title: Custom Size & Design
+        description: >
+          Everything you need to succeed and launch your landing page, right out of the box.
+          No need to install anything else.
+        icon: layers
+
+  - subtitle: Award winning enterprises trust us
+    images:
+      - url: /images/empathy-logo.svg
+        altText: Empathy logo
+        type: ImageBlock
+      - url: /images/wellster-logo.svg
+        altText: Wellster logo
+        type: ImageBlock
+      - url: /images/vise-logo.svg
+        altText: Vise logo
+        type: ImageBlock
+      - url: /images/telus-logo.svg
+        altText: Telus logo
+        type: ImageBlock
+      - url: /images/contenful-logo.svg
+        altText: Contentful logo
+        type: ImageBlock
+      - url: /images/sanity-logo.svg
+        altText: Sanity logo
+        type: ImageBlock
+      - url: /images/rangle-logo.svg
+        altText: Rangle logo
+        type: ImageBlock
+    motion: move-to-left
     colors: bg-light-fg-dark
     styles:
       self:
-        flexDirection: row
         justifyContent: center
       subtitle:
-        textAlign: left
-  - title:
-      text: Social Media Management
-      color: text-dark
-      type: TitleBlock
-    subtitle: Increase your reach
-    text: >
-      A service that helps businesses to manage their social media accounts and
-      posts.
-    actions:
-      - label: Get started
-        url: /
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        type: Button
-      - label: See Tutorials
-        url: /
-        showIcon: true
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        type: Link
-    media:
-      url: /images/hero2.svg
-      altText: Fun feature preview
-      type: ImageBlock
-    badge:
-      label: This is a badge
-      color: text-primary
-      type: Badge
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-    type: GenericSection
-  - title:
-      text: Business Consulting
-      color: text-dark
-      type: TitleBlock
-    subtitle: Be in good company
-    text: >
-      A service that provides advice and guidance to startups and small
-      businesses.
-    actions:
-      - label: Get started
-        url: /
-        icon: arrowRight
-        iconPosition: right
-        style: secondary
-        type: Button
-      - label: See Tutorials
-        url: /
-        showIcon: true
-        icon: arrowRight
-        iconPosition: right
-        style: primary
-        type: Link
-    media:
-      url: /images/hero3.svg
-      altText: Dope design preview
-      type: ImageBlock
-    badge:
-      label: This is a badge
-      color: text-primary
-      type: Badge
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        alignItems: center
-        flexDirection: row-reverse
-    type: GenericSection
+        textAlign: center
+    type: ImageGallerySection
+
   - title: Divider
     colors: bg-light-fg-dark
     styles:
       self:
         padding:
-          - pt-7
-          - pl-7
-          - pb-7
-          - pr-7
+          - pt-2
+          - pl-2
+          - pb-2
+          - pr-2
     type: DividerSection
-  - type: CarouselSection
-    title: null
-    subtitle: What our customers say about us
-    items:
-      - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
-        tagline: Testimonial 1
-        subtitle: 'Maria Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          "Design is a plan for arranging elements in such a way as best to accomplish a particular purpose."
-        tagline: Testimonial 2
-        subtitle: 'John Doe, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: John Doe
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          "Design is how it works, how it functions. Good design doesn't just make a product aesthetically pleasing, it makes it a pleasure to use."
-        tagline: Testimonial 3
-        subtitle: 'Maria Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          “A designer knows he has achieved perfection not when there is nothing
-          left to add, but when there is nothing left to take away.”
-        tagline: Testimonial 4
-        subtitle: 'Maria Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          "Design can be art. Design can be aesthetics. Design is so simple, that's why it is so complicated."
-        tagline: Testimonial 5
-        subtitle: 'Jane Walters, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/person-placeholder-light.png
-          altText: Maria Walters
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-neutralAlt-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-      - title: >-
-          “Quote from some important person goes right here. I love using Netlify Create.”
-        tagline: Testimonial 6
-        subtitle: 'Jane Doe, Company'
-        text: >-
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.
-          explicabo.
-        image:
-          url: /images/img-placeholder-dark.png
-          altText: Jane Doe
-          styles:
-            self:
-              borderRadius: full
-          type: ImageBlock
-        actions: []
-        colors: bg-dark-fg-light
-        styles:
-          self:
-            padding:
-              - pt-9
-              - pb-9
-              - pl-9
-              - pr-9
-            textAlign: left
-            borderRadius: large
-            flexDirection: row
-            justifyContent: center
-        type: FeaturedItem
-    elementId: null
-    variant: next-prev-nav
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        justifyContent: center
-      subtitle:
-        textAlign: center
-  - title:
-      text: List of features here
-      color: text-primary
-      styles:
-        self:
-          textAlign: center
+
+  - type: ManufacturingSection
+    elementId: timber-timeline
+    colors: bg-dark-fg-light
+    eyebrow:
+      text: Manufacturing PROCESS
+
+    heading:
+      text: From Forest to Factory
       type: TitleBlock
-    subtitle: Featured items section subtitle
-    items:
-      - title: Feature Item One
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
-        text: |
-          Follow the tutorial to build your first Netlify Create site.
-        image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder Image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: col
-        type: FeaturedItem
-      - title: Feature Item Two
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
-        text: |
-          Follow the tutorial to build your first awesome Netlify Create site.
-        image:
-          url: /images/abstract-feature2.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: col
-        type: FeaturedItem
-      - title: Feature Item Three
-        tagline: This is the tagline
-        subtitle: This is the item subtitle
-        text: |
-          Learn from the tutorial and build your first awesome Netlify Create site.
-        image:
-          url: /images/abstract-feature1.svg
-          altText: Placeholder image
-          styles:
-            self:
-              borderRadius: x-large
-          type: ImageBlock
-        colors: bg-light-fg-dark
-        styles:
-          self:
-            padding:
-              - pt-8
-              - pl-8
-              - pb-8
-              - pr-8
-            borderRadius: x-large
-            flexDirection: col
-        type: FeaturedItem
+      color: text-light
+    subheading:
+      text: We own the timber. We control the process.
+        From ethical sourcing to precision manufacturing.
+    timeline:
+      layout: horizontal
+      showConnector: true
+      connectorStyle: solid
+      animateOnScroll: true
+      steps:
+        - id: forest
+          stepNumber: '01'
+          title: Ethically Sourced Timber
+          subtitle: >
+            Timber harvested responsibly from managed forests
+            under strict sustainability guidelines.
+          icon: tree/*disabled for now
+          image: /images/M1.png
+          highlight: true
+
+        - id: sawmill
+          stepNumber: '02'
+          title: In-House Saw Mill
+          subtitle: >
+            Logs are processed in our own saw mill, ensuring
+            quality control from the very first cut.
+          icon: tree/*disabled for now
+          image: /images/M2.png
+          highlight: true
+
+        - id: seasoning
+          stepNumber: '03'
+          title: Controlled Seasoning
+          subtitle: >
+            Natural and kiln seasoning ensures strength,
+            durability, and moisture balance.
+          icon: tree/*disabled for now
+          image: /images/M3.png
+          highlight: true
+
+        - id: processing
+          stepNumber: '04'
+          title: Precision Processing
+          subtitle: >
+            Advanced machinery delivers consistent dimensions
+            and flawless finishing.
+          icon: tree/*disabled for now
+          image: /images/M4.png
+          highlight: true
+
+        - id: factory
+          stepNumber: '05'
+          title: Factory-Direct Products
+          subtitle: >
+            Final products move directly from our factory
+            to your project — no middlemen.
+          icon: tree/*disabled for now
+          image: /images/M5.png
+          highlight: true
+
+    proofBar:
+      enabled: true
+      items:
+        - label: Zero Middlemen
+          value: 100%
+        - label: In-House Production
+          value: End-to-End
+        - label: Outsourcing
+          value: None
+
+    cta:
+      enabled: false
+
+  - posts:
+      - content/pages/blog/case-study-1.md
+      - content/pages/blog/case-study-2.md
+      - content/pages/blog/case-study-3.md
+    showThumbnail: true
+    showDate: true
+    showAuthor: true
     variant: three-col-grid
-    colors: bg-neutral-fg-dark
+    colors: bg-light-fg-dark
     styles:
       self:
         padding:
           - pt-16
-          - pl-8
+          - pl-16
           - pb-16
-          - pr-8
+          - pr-16
         justifyContent: center
-      subtitle:
-        textAlign: center
-    type: FeaturedItemsSection
-  - title:
-      text: Generic Section With A Form
-      color: text-dark
+
+    type: FeaturedPostsSection
+    hoverEffect: move-up
+  - type: TestimonialCarousel
+    motion: move-to-left
+    testimonials:
+      - name: Nill Smith
+        role: Financial Director
+        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+        avatar: /images/person1.jpg
+
+      - name: Merry Kinlly
+        role: Chief Accountant
+        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+        avatar: /images/person2.jpg
+
+      - name: Merry Kinlly
+        role: Chief Accountant
+        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+        avatar: /images/person2.jpg
+
+      - name: Merry Kinlly
+        role: Chief Accountant
+        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+        avatar: /images/person2.jpg
+
+  - type: GenericSection
+    elementId: contact-us
+    colors: bg-light-fg-dark
+    styles:
+      self:
+        padding:
+          - pt-24
+          - pb-24
+          - pl-16
+          - pr-16
+        flexDirection: row
+        justifyContent: space-between
+        alignItems: flex-start
+
+    title:
       type: TitleBlock
-    subtitle: Section with a form subtitle
+      text: Contact Us
+      color: text-dark
+      styles:
+        self:
+          textAlign: left
+
+    subtitle: >
+      Reach out to us for premium door solutions. Our team is ready to help you
+      with product details, pricing, and custom requirements.
+
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+
+      <div class="flex items-start gap-4">
+      <span class="text-xl">🏠</span>
+      <div>
+      <strong>Address</strong><br/>
+      487 Sugart Camp Road,<br/>
+      Owatonna, Minnesota, 55060<br/><br/>
+      </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+      <span class="text-xl">📞</span>
+      <div>
+      <strong>Phone</strong><br/>
+      561-456-2321<br/><br/>
+      </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+      <span class="text-xl">✉️</span>
+      <div>
+      <strong>Email</strong><br/>
+      example@email.com
+      </div>
+      </div>
+
     media:
-      fields:
-        - name: name
-          label: Name
-          hideLabel: true
-          placeholder: Your name
-          isRequired: true
-          width: full
-          type: TextFormControl
-        - name: email
-          label: Email
-          hideLabel: true
-          placeholder: Your email
-          isRequired: true
-          width: full
-          type: EmailFormControl
-        - name: message
-          label: Message
-          hideLabel: true
-          placeholder: Your message
-          width: full
-          type: TextareaFormControl
+      type: FormBlock
       elementId: contact-form
       styles:
         self:
           padding:
-            - pt-6
-            - pb-6
-            - pl-6
-            - pr-6
+            - pt-5
+            - pb-5
+            - pl-10
+            - pr-10
+          backgroundColor: bg-dark
+          borderRadius: small
+          maxWidth: 420px
           borderColor: border-dark
           borderStyle: solid
           borderWidth: 1
-          borderRadius: large
-      type: FormBlock
+
+      fields:
+        - type: FormHeadingControl
+          text: Send Us a Message
+        - name: name
+          label: Full Name
+          placeholder: Enter your Name
+          hideLabel: true
+          isRequired: true
+          width: full
+          type: TextFormControl
+          styles:
+            input:
+              textColor: text-light
+              backgroundColor: bg-dark
+              borderColor: border-light
+
+        - name: email
+          label: Email
+          placeholder: Enter your Email
+          hideLabel: true
+          isRequired: true
+          width: full
+          type: EmailFormControl
+          styles:
+            input:
+              textColor: text-light
+              backgroundColor: bg-dark
+              borderColor: border-light
+
+        - name: phone
+          label: Phone Number
+          placeholder: Mobile Number
+          hideLabel: true
+          isRequired: true
+          width: full
+          type: PhoneFormControl
+          styles:
+            input:
+              textColor: text-light
+              backgroundColor: bg-dark
+              borderColor: border-light
+
+        - name: category
+          label: Door Category
+          placeholder: Select Door Category
+          hideLabel: true
+          isRequired: true
+          width: full
+          type: CategoryFormControl
+          options:
+            - label: Teak Wood Door
+              value: Teak Wood Door
+            - label: Mahogany Door
+              value: Mahogany Door
+            - label: Membrane Door
+              value: Membrane Door
+            - label: Glass Door
+              value: Glass Door
+            - label: UPVC Door
+              value: UPVC Door
+            - label: WPC Door
+              value: WPC Door
+            - label: Designer Main Door
+              value: Designer Main Door
+          styles:
+            input:
+              textColor: text-light
+              backgroundColor: bg-dark
+              borderColor: border-light
+
       submitButton:
         type: SubmitButtonFormControl
         label: Submit
-        showIcon: false
-        icon: arrowRight
-        iconPosition: right
         style: primary
-        elementId: null
+        showIcon: false
+
     badge:
-      label: Contact Us
-      color: text-primary
+      label: Let's Discuss on Something Cool Together
+      color: text-dark
       type: Badge
-    colors: bg-light-fg-dark
-    type: GenericSection
+
 seo:
   metaTitle: Home - Demo site
   metaDescription: This demo site is built with Netlify Create.

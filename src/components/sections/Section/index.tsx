@@ -36,7 +36,8 @@ export default function Section(props) {
                     ? 'w-screen max-w-none p-0 m-0 overflow-hidden'
                     : styles?.padding
                     ? mapStyles({ padding: styles.padding })
-                    : 'px-4 py-28',
+                    : 'px-4 py-12 sm:py-16 lg:py-28',
+
 
                 styles?.margin ? mapStyles({ margin: styles.margin }) : undefined
             )}

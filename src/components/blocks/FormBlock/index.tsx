@@ -7,7 +7,7 @@ import SubmitButtonFormControl from './SubmitButtonFormControl';
 
 export default function FormBlock(props) {
     const formRef = React.createRef<HTMLFormElement>();
-    const { fields = [], elementId, submitButton, className, styles = {}, 'data-sb-field-path': fieldPath } = props;
+    const { fields = [], elementId, submitButton, className, styles = {}, title, 'data-sb-field-path': fieldPath } = props;
 
     if (fields.length === 0) {
         return null;
@@ -23,11 +23,21 @@ export default function FormBlock(props) {
 
     return (
         <form
+            style={{ 
+                backgroundColor: 'rgba(0, 0, 0, 0.9)',
+                backdropFilter: 'blur(8px)', // Optional: Adds that modern "glass" look
+                WebkitBackdropFilter: 'blur(8px)' // Support for Safari
+            }}
             className={classNames(
                 'sb-component',
                 'sb-component-block',
                 'sb-component-form-block',
                 className,
+
+                styles?.self?.backgroundColor
+      ? mapStyles({ backgroundColor: styles.self.backgroundColor ?? 'bg-black/40' })
+      : undefined,
+
                 styles?.self?.margin ? mapStyles({ margin: styles?.self?.margin }) : undefined,
                 styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : undefined,
                 styles?.self?.borderWidth && styles?.self?.borderWidth !== 0 && styles?.self?.borderStyle !== 'none'
@@ -48,7 +58,7 @@ export default function FormBlock(props) {
             <div
                 className={classNames('w-full', 'flex', 'flex-wrap', 'gap-8', mapStyles({ justifyContent: styles?.self?.justifyContent ?? 'flex-start' }))}
                 {...(fieldPath && { 'data-sb-field-path': '.fields' })}
-            >
+            >   
                 <input type="hidden" name="form-name" value={elementId} />
                 {fields.map((field, index) => {
                     const modelName = field.__metadata.modelName;

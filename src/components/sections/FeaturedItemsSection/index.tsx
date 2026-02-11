@@ -98,12 +98,24 @@ function FeaturedItemsThreeColGrid(props) {
     const FeaturedItem = getComponent('FeaturedItem');
     return (
         <div
-            className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', 'lg:grid-cols-3', { 'mt-12': hasTopMargin })}
+            className={classNames('w-full', 'grid', 'gap-10', 'grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-4', 'featured-items-grid',{ 'mt-12': hasTopMargin })}
             {...(hasAnnotations && { 'data-sb-field-path': '.items' })}
         >
             {items.map((item, index) => (
-                <FeaturedItem key={index} {...item} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
-            ))}
+    <div
+        key={index}
+        style={{
+            gridColumn: item?.styles?.self?.gridColumn || 'auto'
+        }}
+        {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
+    >
+        <FeaturedItem
+            {...item}
+            isFirst={index === 0}
+            hasSectionTitle={hasSectionTitle}
+        />
+    </div>
+))}
         </div>
     );
 }

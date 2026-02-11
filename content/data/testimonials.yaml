@@ -1,0 +1,19 @@
+testimonials:
+  - name: Nill Smith
+    role: Financial Director
+    quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+
+  - name: Merry Kinlly
+    role: Chief Accountant
+    quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+    avatar: /images/person2.jpg
+
+  - name: John Alex
+    role: Operations Head
+    quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+    avatar: /images/person3.jpg
+
+  - name: John Alex
+    role: Operations Head
+    quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+    avatar: /images/person4.jpg

@@ -12,36 +12,10 @@
     "primaryLinks": [
         {
             "label": "Doors",
-            "url": "/pricing",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Windows",
-            "altText": "Blog",
-            "url": "/blog",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Wooden Sofa",
-            "altText": "Careers page",
-            "url": "/careers",
-            "icon": "arrowRight",
-            "iconPosition": "right",
-            "style": "secondary",
-            "type": "Link"
-        },
-        {
-            "label": "Products List",
             "altText": "Dropdown",
             "links": [
                 {
-                    "label": "Dropdown item",
+                    "label": "Teak Wood Doors",
                     "url": "/",
                     "icon": "arrowRight",
                     "iconPosition": "right",
@@ -49,7 +23,7 @@
                     "type": "Link"
                 },
                 {
-                    "label": "Dropdown item",
+                    "label": "Mahogany Doors",
                     "url": "/",
                     "icon": "arrowRight",
                     "iconPosition": "right",
@@ -57,7 +31,71 @@
                     "type": "Link"
                 },
                 {
-                    "label": "Dropdown item",
+                    "label": "Main Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Pooja Room Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Bedroom Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Kitchen Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Balcony Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Terrace Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Office Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Bathroom Doors",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Glass Doors",
                     "url": "/",
                     "icon": "arrowRight",
                     "iconPosition": "right",
@@ -67,6 +105,163 @@
             ],
             "labelStyle": "secondary",
             "type": "SubNav"
+        },
+        {
+            "label": "Windows",
+            "altText": "Dropdown",
+            "links": [
+                {
+                    "label": "Wooden Windows",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "UPVC Windows",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "Steel Windows",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "WPC Windows",
+                    "url": "/",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                }
+               
+        ],
+            "labelStyle": "secondary",
+            "type": "SubNav"
+        },
+       
+        {
+            "label": "Furnitures",
+            "altText": "Careers page",
+            "url": "/careers",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+        {
+            "label": "Timber & Saw Mill",
+            "altText": "Careers page",
+            "url": "/careers",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
+         {
+  "label": "Hardwares",
+  "altText": "Dropdown",
+  "links": [
+    {
+      "label": "Locks",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Handles",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Hinges",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Tower Bolt",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Aldrop",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Ornaments",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Lens",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Door Stopper",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Safety Latch",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    },
+    {
+      "label": "Others",
+      "url": "/",
+      "icon": "arrowRight",
+      "iconPosition": "right",
+      "style": "secondary",
+      "type": "Link"
+    }
+  ],
+  "labelStyle": "secondary",
+  "type": "SubNav"
+},
+        {
+            "label": "About Us",
+            "altText": "Careers page",
+            "url": "/careers",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
         }
     ],
     "secondaryLinks": [

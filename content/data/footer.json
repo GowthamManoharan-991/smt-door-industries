@@ -6,60 +6,163 @@
     },
     "text": "A description of your brand",
     "primaryLinks": {
-        "title": "Product",
-        "links": [
-            {
-                "label": "Features",
-                "altText": "Features page",
-                "url": "/",
-                "icon": "arrowRight",
-                "iconPosition": "right",
-                "style": "secondary",
-                "type": "Link"
-            },
-            {
-                "label": "Pricing",
-                "url": "/pricing",
-                "icon": "arrowRight",
-                "iconPosition": "right",
-                "style": "secondary",
-                "type": "Link"
-            },
-            {
-                "label": "Documentation",
-                "url": "/",
-                "icon": "arrowRight",
-                "iconPosition": "right",
-                "style": "secondary",
-                "type": "Link"
-            }
-        ],
-        "type": "FooterLinksGroup"
-    },
-    "secondaryLinks": {
-        "title": "Company",
-        "links": [
-            {
-                "label": "Careers",
-                "altText": "careers page",
-                "url": "/careers",
-                "icon": "arrowRight",
-                "iconPosition": "right",
-                "style": "secondary",
-                "type": "Link"
-            },
-            {
-                "label": "Blog",
-                "url": "/blog",
-                "icon": "arrowRight",
-                "iconPosition": "right",
-                "style": "secondary",
-                "type": "Link"
-            }
-        ],
-        "type": "FooterLinksGroup"
-    },
-    "socialLinks": [
+    "title": "Doors",
+    "links": [
+      {
+        "label": "Teak Wood Doors",
+        "url": "/products/teak-wood-doors",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Mahagony Doors",
+        "url": "/products/teak-wood-doors",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Membrane Doors",
+        "url": "/products/teak-wood-doors",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Glass Doors",
+        "url": "/products/teak-wood-doors",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "3D Doors",
+        "url": "/products/designer-doors",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "2D Doors",
+        "url": "/products/designer-doors",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Custom Made Doors",
+        "url": "/products/custom-doors",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      }
+    ],
+    "type": "FooterLinksGroup"
+  },
+  "quickLinks": {
+    "title": "Quick Links",
+    "links": [
+      {
+        "label": "Home",
+        "url": "/",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "About Us",
+        "url": "/about",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Windows",
+        "url": "/manufacturing",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Furnitures",
+        "url": "/manufacturing",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Timber & Saw Mill",
+        "url": "/manufacturing",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Manufacturing",
+        "url": "/manufacturing",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Contact Us",
+        "url": "/contact",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      }
+    ],
+    "type": "FooterLinksGroup"
+  },
+  "secondaryLinks": {
+    "title": "Support",
+    "links": [
+      {
+        "label": "FAQs",
+        "url": "/faqs",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Dealer Enquiry",
+        "url": "/dealer-enquiry",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      },
+      {
+        "label": "Careers",
+        "url": "/careers",
+        "icon": "arrowRight",
+        "iconPosition": "right",
+        "style": "secondary",
+        "type": "Link"
+      }
+    ],
+    "type": "FooterLinksGroup"
+  },
+    "socialLinks":
+    {
+  "title": "Follow Us",
+  "links": [
         {
             "altText": "GitHub link",
             "url": "https://github.com/netlify",
@@ -84,10 +187,11 @@
             "icon": "mail",
             "type": "Social"
         }
-    ],
+    ]
+ },
     "legalLinks": [
         {
-            "label": "Terms",
+            "label": "Terms & Conditions",
             "url": "/",
             "icon": "arrowRight",
             "iconPosition": "right",
@@ -95,7 +199,7 @@
             "type": "Link"
         },
         {
-            "label": "Privacy",
+            "label": "Privacy Policy",
             "url": "/",
             "icon": "arrowRight",
             "iconPosition": "right",
@@ -103,7 +207,7 @@
             "type": "Link"
         }
     ],
-    "copyrightText": "Powered by [Netlify](https://www.netlify.com/)\n",
+    "copyrightText": "Powered by [Gowtham IT Services](https://www.netlify.com/)\n",
     "colors": "bg-dark-fg-light",
     "type": "Footer"
 }

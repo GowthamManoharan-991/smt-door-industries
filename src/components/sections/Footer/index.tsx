@@ -13,8 +13,9 @@ export default function Footer(props) {
         title,
         text,
         primaryLinks,
-        secondaryLinks,
-        socialLinks = [],
+        quickLinks,
+        secondaryLinks,        
+        socialLinks,
         legalLinks = [],
         copyrightText,
         styles = {},
@@ -32,7 +33,7 @@ export default function Footer(props) {
             {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
         >
             <div className="mx-auto max-w-7xl">
-                <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-8">
                     {(logo?.url || title || text) && (
                         <div className="pb-8 sm:col-span-3 lg:col-auto">
                             {(logo?.url || title) && (
@@ -58,19 +59,30 @@ export default function Footer(props) {
                             )}
                         </div>
                     )}
+                    {quickLinks && <FooterLinksGroup {...quickLinks} {...(enableAnnotations && { 'data-sb-field-path': 'quickLinks' })} />}
                     {primaryLinks && <FooterLinksGroup {...primaryLinks} {...(enableAnnotations && { 'data-sb-field-path': 'primaryLinks' })} />}
                     {secondaryLinks && <FooterLinksGroup {...secondaryLinks} {...(enableAnnotations && { 'data-sb-field-path': 'secondaryLinks' })} />}
-                    {socialLinks.length > 0 && (
-                        <div className="pb-6">
-                            <ul className="flex flex-wrap items-center" {...(enableAnnotations && { 'data-sb-field-path': 'socialLinks' })}>
-                                {socialLinks.map((link, index) => (
-                                    <li key={index} className="text-2xl mb-2 mr-8 lg:mr-12 last:mr-0">
-                                        <Social {...link} {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    )}
+                    {socialLinks?.links?.length > 0 && (
+  <div className="pb-8" {...(enableAnnotations && { 'data-sb-field-path': 'socialLinks' })}>
+    {socialLinks.title && (
+      <h2 className="uppercase text-base tracking-wide mb-7">
+        {socialLinks.title}
+      </h2>
+    )}
+
+    <ul className="flex flex-wrap items-center">
+      {socialLinks.links.map((link, index) => (
+        <li key={index} className="text-2xl mb-2 mr-8 lg:mr-10 last:mr-0">
+          <Social
+            {...link}
+            {...(enableAnnotations && { 'data-sb-field-path': `.links.${index}` })}
+          />
+        </li>
+      ))}
+    </ul>
+  </div>
+)}
+
                 </div>
                 {(copyrightText || legalLinks.length > 0) && (
                     <div className="sb-footer-bottom border-t pt-8 mt-16 flex flex-col sm:flex-row sm:flex-wrap sm:justify-between">

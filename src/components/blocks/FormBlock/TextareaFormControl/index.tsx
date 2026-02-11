@@ -34,13 +34,24 @@ export default function TextareaFormControl(props) {
                 </label>
             )}
             <textarea
-                id={props.name}
-                className="sb-textarea text-inherit bg-transparent border border-current w-full p-2 focus:outline-none"
-                name={name}
-                rows={5}
-                {...attr}
-                {...(fieldPath && { 'data-sb-field-path': '.name#@id .name#@name' })}
-            />
+    name={name}
+    rows={1}
+    className="
+        w-full
+        mt-6
+        p-3
+        bg-transparent
+        text-white
+        placeholder-gray-300
+        border
+        border-gray-300
+        focus:border-white
+        focus:outline-none
+        resize-none
+    "
+    placeholder={placeholder}
+/>
+
         </div>
     );
 }
