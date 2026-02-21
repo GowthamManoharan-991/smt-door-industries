@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
+import DoorInstallationProcess from './sections/DoorInstallationProcess';
 
 
 
@@ -64,6 +65,7 @@ const components = {
     ImageBlock: dynamic(() => import('./blocks/ImageBlock')),
     ImageGallerySection: dynamic(() => import('./sections/ImageGallerySection')),
     ManufacturingSection: dynamic(() => import('./sections/ManufacturingSection')),
+    DoorInstallationProcess: dynamic(() => import('./sections/DoorInstallationProcess')),
     TimberSawMillSection:dynamic(() => import('./sections/TimberSawMillSection')),
     WhyChooseUsSection: dynamic(() => import('./sections/WhyChooseUsSection')),
     PostFeedSection: dynamic(() => import('./sections/PostFeedSection')),

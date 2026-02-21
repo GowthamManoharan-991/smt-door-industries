@@ -264,18 +264,15 @@ sections:
 
   - type: GenericSection
     title:
-      text: Generic section with a video
+      text: TIMBER & SAW MILL PROCESS
       color: text-dark
       styles:
         self:
           textAlign: left
       type: TitleBlock
-    subtitle: Section with a video subtitle
+    subtitle: See How We Manufacture All Wood Products
     text: |-
-      Aenean eros ipsum, interdum quis dignissim non, sollicitudin vitae nisl.
-      Aenean vel aliquet elit, at blandit ipsum. Sed eleifend felis sit amet
-      erat molestie, hendrerit malesuada justo ultrices. Nunc volutpat at erat
-      vitae interdum. Ut nec massa eget lorem blandit condimentum et at risus.
+      From raw timber logs to finished wood products, we handle cutting, sizing, seasoning, polishing, and final finishing in-house. Our modern machines and skilled team ensure strong, accurate, and long-lasting woodwork for every requirement.
     actions: []
     media:
       title: Title of the video
@@ -443,26 +440,48 @@ sections:
     cta:
       enabled: false
 
-  - posts:
-      - content/pages/blog/case-study-1.md
-      - content/pages/blog/case-study-2.md
-      - content/pages/blog/case-study-3.md
-    showThumbnail: true
-    showDate: true
-    showAuthor: true
-    variant: three-col-grid
+  - type: DoorInstallationProcess
+    elementId: timber-timeline
     colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-16
-          - pl-16
-          - pb-16
-          - pr-16
-        justifyContent: center
+    eyebrow:
+      text: Installation Journey
 
-    type: FeaturedPostsSection
-    hoverEffect: move-up
+    heading:
+      text: Our Door Installation Process
+      type: TitleBlock
+      color: text-dark
+    subheading:
+      text: From factory finishing to flawless installation at your home
+    timeline:
+      layout: horizontal
+      showConnector: true
+      connectorStyle: solid
+      animateOnScroll: true
+      steps:
+        - id: Step1
+          title: Finishing & Quality Check
+          subtitle: Doors are polished and inspected for strength.
+          image: /images/p1.png
+          highlight: true
+
+        - id: Step2
+          stepNumber: '02'
+          title: Safe Delivery & Site Preparation
+          subtitle: >
+            Secure transport and site readiness verification.
+          icon: tree/*disabled for now
+          image: /images/p2.png
+          highlight: true
+
+        - id: Step3
+          stepNumber: '03'
+          title: Expert Door Installation
+          subtitle: >
+            Precise alignment and professional fitting.
+          icon: tree/*disabled for now
+          image: /images/p3.png
+          highlight: true
+
   - type: TestimonialCarousel
     motion: move-to-left
     testimonials:

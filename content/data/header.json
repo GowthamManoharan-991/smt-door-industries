@@ -13,10 +13,11 @@
         {
             "label": "Doors",
             "altText": "Dropdown",
+            "url": "/doors",
             "links": [
                 {
                     "label": "Teak Wood Doors",
-                    "url": "/",
+                    "url": "/doors",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
@@ -150,8 +151,8 @@
        
         {
             "label": "Furnitures",
-            "altText": "Careers page",
-            "url": "/careers",
+            "altText": "furniture page",
+            "url": "/furnitures",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
@@ -159,8 +160,8 @@
         },
         {
             "label": "Timber & Saw Mill",
-            "altText": "Careers page",
-            "url": "/careers",
+            "altText": "timber &Saw mill page",
+            "url": "/timber&sawmill",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
