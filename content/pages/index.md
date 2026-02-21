@@ -273,7 +273,16 @@ sections:
     subtitle: See How We Manufacture All Wood Products
     text: |-
       From raw timber logs to finished wood products, we handle cutting, sizing, seasoning, polishing, and final finishing in-house. Our modern machines and skilled team ensure strong, accurate, and long-lasting woodwork for every requirement.
-    actions: []
+    actions:
+      - type: Button
+        label: See How We Work
+        url: /products
+        style: primary
+      - type: Button
+        label: Contact Us
+        url: /contact
+        style: secondary
+
     media:
       title: Title of the video
       url: /images/placeholder-video.mp4

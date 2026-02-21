@@ -130,7 +130,7 @@ export default function GenericSection(props) {
                                     {text}
                                 </Markdown>
                             )}
-
+                             
                             {actions.length > 0 && (
                                 <div className="flex gap-4 mt-8">
                                     {actions.map((action, index) => (
