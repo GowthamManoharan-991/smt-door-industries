@@ -73,13 +73,14 @@ export default function GenericSection(props) {
                 className={classNames(
                     "relative z-10",
                     "flex items-center justify-center min-h-[60vh] px-4 sm:px-6 lg:px-10"
+                     // 👈 reduce top space in mobile
                 )}
             >
                 <div
-                    className={classNames(
-                        isHero
-                            ? "w-full text-white px-10"
-                            : "w-full flex items-stretch self-stretch gap-x-12 gap-y-16",
+    className={classNames(
+        isHero
+            ? "w-full text-white px-4 sm:px-8 lg:px-10 max-w-2xl mx-auto"
+            : "w-full flex items-stretch self-stretch gap-x-6 lg:gap-x-12 gap-y-8 lg:gap-y-16",
                         !isHero &&
                             mapFlexDirectionStyles(flexDirection),
                         !isHero &&
@@ -94,21 +95,39 @@ export default function GenericSection(props) {
                                 isHero
                                     ? "w-full"
                                     : "w-full max-w-sectionBody",
-                                hasMedia && !isHero && "lg:max-w-[27.5rem]"
+                                hasMedia && !isHero && "lg:max-w-[36.5rem]"
                             )}
                         >
-                            {badge && <Badge {...badge} />}
+                            {/* TOP EYEBROW TEXT */}
+{/* TOP EYEBROW TEXT */}
+{badge?.label && (
+    <p
+        className={classNames(
+            "uppercase font-medium",
+            "tracking-[0.15em]",   // more spacing
+            "text-[14px] sm:text-[15px]",
+            isHero ? "text-white/80" : "text-[#6B7280]" // soft grey like design
+        )}
+    >
+        {badge.label}
+    </p>
+)}
 
-                            {title && (
-                                <TitleBlock
-                                    {...title}
-                                    className={classNames(
-                                        { 'mt-4': badge?.label },
-                                        isHero ? "text-white" : ""
-                                    )}
-                                />
-                            )}
-
+{/* MAIN TITLE */}
+{title?.text && (
+    <h2
+        className={classNames(
+            "mt-4 font-semibold",
+            "text-3xl sm:text-3xl lg:text-[46px]",  // bigger premium size
+            "leading-[1.2] sm:leading-[1.25]",      // more breathing space
+            "tracking-[-0.01em]",                  // elegant tight spacing
+            "max-w-2xl",
+            isHero ? "text-white" : "text-[#4A4A4A]" // MATCH screenshot grey
+        )}
+    >
+        {title.text}
+    </h2>
+)}
                             {subtitle && (
                                 <p
                                     className={classNames(
@@ -132,7 +151,7 @@ export default function GenericSection(props) {
                             )}
                              
                             {actions.length > 0 && (
-                                <div className="flex gap-4 mt-8">
+                                <div className="flex gap-2 mt-4">
                                     {actions.map((action, index) => (
                                         <Action key={index} {...action} />
                                     ))}
@@ -143,7 +162,7 @@ export default function GenericSection(props) {
 
                     {/* MEDIA (ONLY IF NOT HERO) */}
                     {!isHero && hasMedia && (
-                        <div className="w-full lg:w-[57.5%] lg:shrink-0">
+                        <div className="w-full lg:w-[57.5%] lg:shrink-0 px-0 sm:px-2 lg:px-0">
                             <Media media={media} hasAnnotations={enableAnnotations} />
                         </div>
                     )}

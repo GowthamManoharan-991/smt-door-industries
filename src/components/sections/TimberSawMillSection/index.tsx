@@ -38,17 +38,19 @@ export default function TimberSawMillSection({
         {/* LEFT CONTENT */}
         <div>
           {eyebrow && (
-            <span className="text-sm uppercase tracking-widest text-amber-400">
+            <span className="text-sm uppercase tracking-widest text-amber-500">
               {eyebrow}
             </span>
           )}
 
-          <h2 className="text-4xl xl:text-5xl font-bold leading-tight mt-4">
+          <h2 className="text-3xl sm:text-3xl lg:text-[46px] font-semibold leading-[1.2] sm:leading-[1.25] tracking-[0.05em] sm:tracking-[0.01em] lg:tracking-[0.015em]
+
+ mt-4">
             {title}
           </h2>
 
           {description && (
-            <p className="text-gray-400 mt-6 max-w-xl">
+            <p className="text-gray-300 mt-6 max-w-xl">
               {description}
             </p>
           )}
@@ -58,7 +60,7 @@ export default function TimberSawMillSection({
               {stats.map((stat, i) => (
                 <div key={i}>
                   <div className="text-2xl text-amber-500 font-bold">{stat.value}</div>
-                  <div className="text-sm text-gray-400 mt-1">
+                  <div className="text-sm text-gray-300 mt-1">
                     {stat.label}
                   </div>
                 </div>

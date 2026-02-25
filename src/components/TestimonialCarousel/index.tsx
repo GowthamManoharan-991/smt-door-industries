@@ -17,8 +17,8 @@ export default function TestimonialCarousel({
   testimonials: Testimonial[];
 }) {
   return (
-    <section className="py-24 bg-[#1c1a17]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 bg-[#1c1a17]">
+      <div className="max-w-[78rem] mx-auto px-6">
         {/* GRID LAYOUT */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
 

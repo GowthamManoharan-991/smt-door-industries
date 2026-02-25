@@ -86,10 +86,10 @@ sections:
     styles:
       self:
         padding:
-          - pt-24
+          - pt-12
           - pb-0
-          - pl-12
-          - pr-12
+          - pl-6
+          - pr-6
         maxHeight: 220px
         alignItems: center
         justifyContent: space-between
@@ -234,7 +234,7 @@ sections:
 
     title: >
       Your Vision Our Expertise
-      Your Success Get Noticed Generate Leads Dominate.
+      Your Success Get Noticed Generate Leads Dominate
 
     description: >
       Timber sourced responsibly and processed in our own saw mill using
@@ -263,14 +263,16 @@ sections:
         alt: Door manufacturing
 
   - type: GenericSection
+    badge:
+      label: How We Craft Wood Products
     title:
-      text: TIMBER & SAW MILL PROCESS
+      text: Timber & Saw Mill Process
       color: text-dark
       styles:
         self:
           textAlign: left
       type: TitleBlock
-    subtitle: See How We Manufacture All Wood Products
+    subtitle: ' '
     text: |-
       From raw timber logs to finished wood products, we handle cutting, sizing, seasoning, polishing, and final finishing in-house. Our modern machines and skilled team ensure strong, accurate, and long-lasting woodwork for every requirement.
     actions:
@@ -518,15 +520,24 @@ sections:
     elementId: contact-us
     colors: bg-light-fg-dark
     styles:
-      self:
-        padding:
-          - pt-24
-          - pb-24
-          - pl-16
-          - pr-16
-        flexDirection: row
-        justifyContent: space-between
-        alignItems: flex-start
+    self:
+      padding:
+        - pt-10
+        - pb-10
+        - pl-6
+        - pr-6
+        - sm:pt-16
+        - sm:pb-16
+        - sm:pl-8
+        - sm:pr-8
+        - lg:pt-24
+        - lg:pb-24
+        - lg:pl-16
+        - lg:pr-16
+      flexDirection: col
+      lg:flexDirection: row
+      justifyContent: space-between
+      alignItems: flex-start
 
     title:
       type: TitleBlock
@@ -546,8 +557,8 @@ sections:
       <span class="text-xl">🏠</span>
       <div>
       <strong>Address</strong><br/>
-      487 Sugart Camp Road,<br/>
-      Owatonna, Minnesota, 55060<br/><br/>
+      313/1, Thoppampalayam Road, Myleripalayam,<br/>
+      Ottakkalmandapam, Coimbatore, Tamil Nadu - 641032<br/><br/>
       </div>
       </div>
 
@@ -555,7 +566,7 @@ sections:
       <span class="text-xl">📞</span>
       <div>
       <strong>Phone</strong><br/>
-      561-456-2321<br/><br/>
+      +91 87544 70389<br/><br/>
       </div>
       </div>
 

@@ -19,7 +19,7 @@ export default function CategoryGridSection(props) {
       {heading && (
         <div className="mb-14 text-center">
           {heading.eyebrow && (
-            <p className="text-sm tracking-widest uppercase text-gray-500 mb-3">
+            <p className="text-sm tracking-[0.15em] uppercase  text-[#6B7280] mb-3">
               {heading.eyebrow}
             </p>
           )}

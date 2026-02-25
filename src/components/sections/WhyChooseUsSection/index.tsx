@@ -12,11 +12,11 @@ export default function WhyChooseUsSection(props) {
   const { eyebrow, title, subtitle, items = [] } = props;
 
   return (
-    <section className="relative w-full py-24 bg-[#1C1A17] text-white">
+    <section className="relative w-full py-16 bg-[#1C1A17] text-white">
       <div className="mx-auto max-w-7xl px-6 text-center">
         {/* Eyebrow */}
         {eyebrow && (
-          <p className="text-sm tracking-widest text-gray-400 uppercase">
+          <p className="text-sm tracking-widest text-amber-500 uppercase">
             {eyebrow}
           </p>
         )}

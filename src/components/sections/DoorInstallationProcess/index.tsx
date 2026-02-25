@@ -40,7 +40,7 @@ export default function DoorInstallationProcess({
 
   return (
     <section className="relative bg-white text-gray-900 py-12 lg:py-20">
-      <div className="container mx-auto px-16 sm:px-4 lg:px-32">
+      <div className="container mx-auto px-8 sm:px-4 lg:px-24">
 
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -121,7 +121,7 @@ export default function DoorInstallationProcess({
                     <svg width="40" height="20" viewBox="0 0 40 20" fill="none">
                       <path
                         d="M0 10H36M36 10L28 2M36 10L28 18"
-                        stroke="#78808A"
+                        stroke="#4B5563"
                         strokeWidth="2"
                       />
                     </svg>

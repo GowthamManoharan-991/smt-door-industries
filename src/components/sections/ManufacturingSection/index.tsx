@@ -56,7 +56,7 @@ export default function TimberTimelineSection({
   if (!timeline?.steps?.length) return null;
 
   return (
-    <section className="relative bg-[#1c1a17] text-white py-20 overflow-hidden">
+    <section className="relative bg-[#1c1a17] text-white py-16 overflow-hidden">
       <div className="container mx-auto px-4">
 
         {/* Heading */}
