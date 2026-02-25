@@ -59,11 +59,20 @@ sections:
     styles:
       self:
         padding:
-          - pt-24
-          - pb-24
-          - pl-16
-          - pr-16
+          - pt-10
+          - pb-10
+          - pl-6
+          - pr-6
+          - sm:pt-16
+          - sm:pb-16
+          - sm:pl-8
+          - sm:pr-8
+          - lg:pt-24
+          - lg:pb-24
+          - lg:pl-16
+          - lg:pr-16
         flexDirection: row
+        lg:flexDirection: row
         justifyContent: space-between
         alignItems: flex-start
 
