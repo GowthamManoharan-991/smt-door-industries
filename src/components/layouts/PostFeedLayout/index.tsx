@@ -15,6 +15,7 @@ export default function PostFeedLayout(props) {
     const PostFeedSection: any = getComponent('PostFeedSection');
     const pageLinks = PageLinks({ pageIndex, baseUrlPath, numOfPages });
     const searchBox = SearchBox({ enableSearch });
+    const AutoCompletePosts = getComponent('AutoCompletePosts');
 
     return (
         <BaseLayout page={page} site={site}>
