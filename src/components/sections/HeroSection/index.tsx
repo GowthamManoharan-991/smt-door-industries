@@ -62,29 +62,20 @@ export default function HeroSection({ slides = [] }: Props) {
     <section className="relative w-full min-h-[80vh] lg:min-h-[90vh] overflow-hidden flex items-center bg-black">
 
       {/* ---------------- BACKGROUND (FADE ONLY) ---------------- */}
-      <div className="absolute inset-0">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className="hero-bg"
-            style={{
-              backgroundImage: `url(${slide.image})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition:
-                typeof window !== "undefined" && window.innerWidth < 640
-                  ? "100% center" // mobile – extreme right
-                  : "right center",
-              position: "absolute",
-              inset: 0,
-              opacity: index === currentIndex ? 1 : 0,
-              transition: "opacity 1000ms ease",
-              pointerEvents: "none",
-            }}
-          />
-        ))}
-      </div>
-
+<div className="absolute inset-0">
+  {slides.map((slide, index) => (
+    <div
+      key={index}
+      className="hero-bg absolute inset-0 bg-cover bg-no-repeat bg-right sm:bg-right lg:bg-center"
+      style={{
+        backgroundImage: `url(${slide.image})`,
+        opacity: index === currentIndex ? 1 : 0,
+        transition: "opacity 1000ms ease",
+        pointerEvents: "none",
+      }}
+    />
+  ))}
+</div>
       {/* ---------------- OVERLAY ---------------- */}
       <div
         className="absolute inset-0"
@@ -110,7 +101,7 @@ export default function HeroSection({ slides = [] }: Props) {
         {activeSlide.tag && (
           <div
             className="mb-3 text-lg sm:text-sm lg:text-lg font-bold  tracking-[0.35em] sm:tracking-[0.25em] lg:tracking-[0.75em] uppercase"
-            style={{ color: "#C6B461" }}
+            style={{ color: "#D4AF37" }}
           >
             {activeSlide.tag}
           </div>
@@ -132,7 +123,7 @@ export default function HeroSection({ slides = [] }: Props) {
               fontFamily: "'Futura STD', sans-serif",
               lineHeight: "1.4",          // ✅ reliable line-height
               color: "#FFFFFF",
-              borderColor: "#C6B461",     // classy gold
+              borderColor: "#D4AF37",     // classy gold
             }}
           >
             {activeSlide.title}

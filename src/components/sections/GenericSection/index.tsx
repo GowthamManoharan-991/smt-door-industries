@@ -151,7 +151,7 @@ export default function GenericSection(props) {
                             )}
                              
                             {actions.length > 0 && (
-                                <div className="flex gap-2 mt-4">
+                                <div className="flex flex-col sm:flex-row gap-3 mt-4">
                                     {actions.map((action, index) => (
                                         <Action key={index} {...action} />
                                     ))}
@@ -173,9 +173,31 @@ export default function GenericSection(props) {
 }
 
 // Media Component
-function Media({ media,hasAnnotations }) {
+function Media({ media, hasAnnotations }) {
     const modelName = media.__metadata.modelName;
     const MediaComponent = getComponent(modelName);
+
+    // If mobile image exists
+    if (media.mobileImage) {
+        return (
+            <div className="w-full">
+                {/* Mobile Image */}
+                <img
+                    src={media.mobileImage}
+                    alt={media.altText}
+                    className="block lg:hidden w-full"
+                />
+
+                {/* Desktop Image */}
+                <img
+                    src={media.url}
+                    alt={media.altText}
+                    className="hidden lg:block w-full"
+                />
+            </div>
+        );
+    }
+
     return <MediaComponent {...media} />;
 }
 

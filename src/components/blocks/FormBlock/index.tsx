@@ -13,13 +13,36 @@ export default function FormBlock(props) {
         return null;
     }
 
-    function handleSubmit(event) {
-        event.preventDefault();
+    async function handleSubmit(event) {
+    event.preventDefault();
 
-        const data = new FormData(formRef.current);
-        const value = Object.fromEntries(data.entries());
-        alert(`Form data: ${JSON.stringify(value)}`);
+    if (!formRef.current) return;
+
+    const data = new FormData(formRef.current);
+    const value = Object.fromEntries(data.entries());
+
+    try {
+        const response = await fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(value),
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            alert("Message sent successfully!");
+            formRef.current?.reset();
+        } else {
+            alert("Something went wrong.");
+        }
+    } catch (error) {
+        console.error(error);
+        alert("Server error.");
     }
+}
 
     return (
         <form

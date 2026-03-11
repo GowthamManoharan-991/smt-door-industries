@@ -121,6 +121,7 @@ sections:
     media:
       type: ImageBlock
       url: /images/About.png
+      mobileImage: /images/Ab.jpeg
       altText: Premium Door Collection
       styles:
       self:
