@@ -12,7 +12,7 @@ export default function PostFeedLayout(props) {
     const BaseLayout = getBaseLayoutComponent(page.baseLayout, site.baseLayout);
     const { enableAnnotations = true } = site;
     const { title, topSections = [], bottomSections = [], pageIndex, baseUrlPath, numOfPages, enableSearch, items, postFeed } = page;
-    const PostFeedSection = getComponent('PostFeedSection') as React.ComponentType<any>;
+    const PostFeedSection: any = getComponent('PostFeedSection');
     const pageLinks = PageLinks({ pageIndex, baseUrlPath, numOfPages });
     const searchBox = SearchBox({ enableSearch });
 
