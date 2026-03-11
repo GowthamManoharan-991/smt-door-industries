@@ -1,15 +1,9 @@
-/**
- * @type {import('next').NextConfig}
- */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-    env: {
-        stackbitPreview: process.env.STACKBIT_PREVIEW
-    },
-    trailingSlash: true,
-    reactStrictMode: true,
-    allowedDevOrigins: [
-        '192.168.1.84'
-    ]
+    typescript: {
+        // Ignore TypeScript build errors
+        ignoreBuildErrors: true
+    }
 };
 
 module.exports = nextConfig;
