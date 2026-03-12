@@ -5,7 +5,7 @@ import { getAlgoliaResults } from '@algolia/autocomplete-js';
 import '@algolia/autocomplete-theme-classic';
 import BaseAutoComplete from './BaseAutoComplete';
 
-const searchClient = algoliasearch(ALGOLIA_APP_ID, ALGOLIA_SEARCH_API_KEY);
+const searchClient = algoliasearch(ALGOLIA_APP_ID!, ALGOLIA_SEARCH_API_KEY!);
 
 export default function AutoCompletePosts() {
     return (
@@ -47,7 +47,7 @@ export default function AutoCompletePosts() {
 
 export function ResultItem({ hit, components }) {
     return (
-        <a href={hit.url} className="aa-ItemLink" tabIndex="0">
+        <a href={hit.url} className="aa-ItemLink" tabIndex={0}>
             <div className="aa-ItemContent">
                 <div className="aa-ItemTitle">
                     <components.Highlight hit={hit} attribute="title" />
