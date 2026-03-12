@@ -95,7 +95,7 @@ function FeaturedItemsThreeColGrid(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('FeaturedItem');
+    const FeaturedItem = getComponent('FeaturedItem') as React.ComponentType<any>;
     return (
         <div
             className={classNames('w-full', 'grid', 'gap-10', 'grid-cols-1', 'sm:grid-cols-2', 'lg:grid-cols-4', 'featured-items-grid',{ 'mt-12': hasTopMargin })}
@@ -125,7 +125,7 @@ function FeaturedItemsTwoColGrid(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('FeaturedItem');
+    const FeaturedItem = getComponent('FeaturedItem') as React.ComponentType<any>;
     return (
         <div
             className={classNames('w-full', 'grid', 'gap-10', 'sm:grid-cols-2', { 'mt-12': hasTopMargin })}
@@ -143,7 +143,7 @@ function FeaturedItemsSmallList(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('FeaturedItem');
+    const FeaturedItem = getComponent('FeaturedItem') as React.ComponentType<any>;
     return (
         <div
             className={classNames('w-full', 'max-w-3xl', 'grid', 'gap-10', { 'mt-12': hasTopMargin })}
@@ -161,7 +161,7 @@ function FeaturedItemsBigList(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItem = getComponent('FeaturedItem');
+    const FeaturedItem = getComponent('FeaturedItem') as React.ComponentType<any>;
     return (
         <div className={classNames('w-full', 'grid', 'gap-10', { 'mt-12': hasTopMargin })} {...(hasAnnotations && { 'data-sb-field-path': '.items' })}>
             {items.map((item, index) => (
@@ -176,7 +176,7 @@ function FeaturedItemsToggleList(props) {
     if (items.length === 0) {
         return null;
     }
-    const FeaturedItemToggle = getComponent('FeaturedItemToggle');
+    const FeaturedItemToggle = getComponent('FeaturedItemToggle') as React.ComponentType<any>;
     return (
         <div
             className={classNames('w-full', 'max-w-3xl', 'grid', 'gap-6', { 'mt-12': hasTopMargin })}
