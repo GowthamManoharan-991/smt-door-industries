@@ -98,7 +98,7 @@ function FeaturedPeopleThreeCol({ people = [], hasTopMargin, hasSectionTitle, ha
             {...(hasAnnotations && { 'data-sb-field-path': '.people' })}
         >
             {people.map((person, index) => (
-                <FeaturedPerson key={index} {...person} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <FeaturedPerson key={index} {...(person as any)} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
             ))}
         </div>
     );
@@ -113,7 +113,7 @@ function FeaturedPeopleFourCol({ people = [], hasTopMargin, hasSectionTitle, has
             {...(hasAnnotations && { 'data-sb-field-path': '.people' })}
         >
             {people.map((person, index) => (
-                <FeaturedPerson key={index} {...person} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <FeaturedPerson key={index} {...(person as any)} hasSectionTitle={hasSectionTitle} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
             ))}
         </div>
     );
@@ -131,7 +131,7 @@ function FeaturedPeopleMixedCol({ people = [], hasTopMargin, hasSectionTitle, ha
             {people.map((person, index) => (
                 <FeaturedPerson
                     key={index}
-                    {...person}
+                    {...(person as any)}
                     hasSectionTitle={hasSectionTitle}
                     {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     className={classNames('lg:col-span-4', {
