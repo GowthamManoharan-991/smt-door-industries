@@ -79,7 +79,7 @@ function ImageGalleryStaticGrid({ images = [], hasTopMargin, justifyContent = 'f
             {...(hasAnnotations && { 'data-sb-field-path': '.images' })}
         >
             {images.map((image, index) => (
-                <ImageBlock key={index} {...image} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                <ImageBlock key={index} {...(image as any)} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
             ))}
         </div>
     );
@@ -130,12 +130,12 @@ function ImageGalleryAnimatedGrid({ images = [], motion, hasTopMargin, hasAnnota
                     >
                         <div className="sb-image-strip-content flex justify-around" {...(hasAnnotations && { 'data-sb-field-path': '.images' })}>
                             {images.map((image, index) => (
-                                <ImageBlock key={index} {...image} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                                <ImageBlock key={index} {...(image as any)} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                             ))}
                         </div>
                         <div className="sb-image-strip-content flex justify-around" {...(hasAnnotations && { 'data-sb-field-path': '.images' })}>
                             {images.map((image, index) => (
-                                <ImageBlock key={index} {...image} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                                <ImageBlock key={index} {...(image as any)} {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })} />
                             ))}
                         </div>
                     </div>
