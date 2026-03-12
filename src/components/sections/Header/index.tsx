@@ -373,7 +373,7 @@ function ListOfSubNavLinks({ links = [], hasAnnotations, inMobileMenu = false })
             {links.map((link, index) => (
                 <li key={index}>
                     <Action
-                        {...link}
+                        {...(link as any)}
                         className={classNames(inMobileMenu ? 'w-full justify-start' : 'text-sm')}
                         {...(hasAnnotations && { 'data-sb-field-path': `.${index}` })}
                     />

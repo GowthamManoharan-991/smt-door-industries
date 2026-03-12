@@ -198,7 +198,7 @@ function Media({ media, hasAnnotations }) {
         );
     }
 
-    return <MediaComponent {...media} />;
+    return <MediaComponent {...(media as any)} />;
 }
 
 // Layout Mappings
