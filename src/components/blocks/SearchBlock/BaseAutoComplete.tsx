@@ -1,14 +1,11 @@
-/*
-Taken from https://www.algolia.com/doc/ui-libraries/autocomplete/integrations/using-react/#with-react-18
-*/
 import { autocomplete } from '@algolia/autocomplete-js';
 import React, { createElement, Fragment, useEffect, useRef } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, Root } from 'react-dom/client';
 
-export default function BaseAutoComplete(props) {
-    const containerRef = useRef(null);
-    const panelRootRef = useRef(null);
-    const rootRef = useRef(null);
+export default function BaseAutoComplete(props: any) {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const panelRootRef = useRef<Root | null>(null);
+    const rootRef = useRef<HTMLElement | null>(null);
 
     useEffect(() => {
         if (!containerRef.current) {
@@ -18,7 +15,8 @@ export default function BaseAutoComplete(props) {
         const search = autocomplete({
             container: containerRef.current,
             renderer: { createElement, Fragment, render: () => {} },
-            render({ children }, root) {
+
+            render({ children }, root: HTMLElement) {
                 if (!panelRootRef.current || rootRef.current !== root) {
                     rootRef.current = root;
 
@@ -28,23 +26,24 @@ export default function BaseAutoComplete(props) {
 
                 panelRootRef.current.render(children);
             },
+
             shouldPanelOpen: ({ state }) => {
                 return state.query !== '' || props.openOnFocus;
             },
+
             navigator: {
                 navigate({ itemUrl }) {
                     window.location.assign(itemUrl);
                 },
                 navigateNewTab({ itemUrl }) {
                     const windowReference = window.open(itemUrl, '_blank', 'noopener');
-                    if (windowReference) {
-                        windowReference.focus();
-                    }
+                    if (windowReference) windowReference.focus();
                 },
                 navigateNewWindow({ itemUrl }) {
                     window.open(itemUrl, '_blank', 'noopener');
                 }
             },
+
             ...props
         });
 
