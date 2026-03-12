@@ -175,7 +175,7 @@ export default function GenericSection(props) {
 // Media Component
 function Media({ media, hasAnnotations }) {
     const modelName = media.__metadata.modelName;
-    const MediaComponent = getComponent(modelName);
+    const MediaComponent = getComponent(modelName) as React.ComponentType<any>;
 
     // If mobile image exists
     if (media.mobileImage) {
