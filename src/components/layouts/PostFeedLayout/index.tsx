@@ -15,7 +15,7 @@ export default function PostFeedLayout(props) {
     const PostFeedSection: any = getComponent('PostFeedSection');
     const pageLinks = PageLinks({ pageIndex, baseUrlPath, numOfPages });
     const searchBox = SearchBox({ enableSearch });
-    const AutoCompletePosts = getComponent('AutoCompletePosts');
+    
 
     return (
         <BaseLayout page={page} site={site}>
@@ -68,7 +68,9 @@ function SearchBox({ enableSearch }) {
     if (!enableSearch) {
         return null;
     }
-    const AutoCompletePosts = getComponent('AutoCompletePosts');
+
+    const AutoCompletePosts = getComponent('AutoCompletePosts') as React.ComponentType<any>;
+
     const searchBoxStyle = {
         '--aa-text-color-rgb': '2,0,29',
         '--aa-muted-color-rgb': '2,0,29',
@@ -77,18 +79,20 @@ function SearchBox({ enableSearch }) {
         '--aa-input-border-color-alpha': 0.25,
         '--aa-primary-color-rgb': '2,0,29'
     } as React.CSSProperties;
+
     return (
         <div className="w-full mb-9" style={searchBoxStyle}>
             <AutoCompletePosts />
         </div>
     );
 }
-
 function PageLinks({ pageIndex, baseUrlPath, numOfPages }) {
     if (numOfPages < 2) {
         return null;
     }
-    const pageLinks = [];
+
+    const pageLinks: React.ReactNode[] = [];
+
     const padRange = 2;
     const startIndex = pageIndex - padRange > 2 ? pageIndex - padRange : 0;
     const endIndex = pageIndex + padRange < numOfPages - 3 ? pageIndex + padRange : numOfPages - 1;
