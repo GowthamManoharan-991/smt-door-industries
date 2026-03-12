@@ -11,9 +11,9 @@ import { getPageUrl } from './page-utils';
 const pagesDir = 'content/pages';
 const dataDir = 'content/data';
 
-const allReferenceFields = {};
+const allReferenceFields: any = {};
 Object.entries(allModels).forEach(([modelName, model]) => {
-    model.fields.forEach((field) => {
+    model.fields?.forEach((field) => {
         if (field.type === 'reference' || (field.type === 'list' && field.items?.type === 'reference')) {
             allReferenceFields[modelName + ':' + field.name] = true;
         }
@@ -32,11 +32,11 @@ function contentFilesInPath(dir: string) {
 
 function readContent(file: string) {
     const rawContent = fs.readFileSync(file, 'utf8');
-    let content = null;
+    let content: any = null;
     switch (path.extname(file).substring(1)) {
         case 'md':
             const parsedMd = frontmatter<Record<string, any>>(rawContent);
-            content = {
+            content  = {
                 ...parsedMd.attributes,
                 markdown_content: parsedMd.body
             };
@@ -49,15 +49,15 @@ function readContent(file: string) {
     }
 
     // Make Sourcebit-compatible
-    content.__metadata = {
+    (content as any).__metadata = {
         id: file.replace(/\\/g, '/'), // Replace backslashes with forward slashes
-        modelName: content.type
+        modelName: (content as any).type
     };
 
     return content;
 }
 
-function resolveReferences(content, fileToContent) {
+function resolveReferences(content: any, fileToContent: any) {
     if (!content || !content.type) return;
 
     const modelName = content.type;
@@ -95,14 +95,14 @@ export function allContent() {
         return contentFilesInPath(dir).map((file) => readContent(file));
     });
     const objects = [...pages, ...data];
-    const fileToContent = Object.fromEntries(objects.map((e) => [e.__metadata.id, e]));
+    const fileToContent = Object.fromEntries(objects.map((e: any) => [e?.__metadata.id, e]));
     objects.forEach((e) => resolveReferences(e, fileToContent));
 
-    pages.forEach((page) => {
+    pages.forEach((page: any) => {
         page.__metadata.urlPath = getPageUrl(page);
     });
 
-    const siteConfig = data.find((e) => e.__metadata.modelName === Config.name);
+    const siteConfig = data.find((e: any) => e?.__metadata.modelName === Config.name);
 
     resolveReferences(siteConfig, fileToContent);
 
