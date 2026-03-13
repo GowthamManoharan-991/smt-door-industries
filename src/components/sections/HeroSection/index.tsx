@@ -115,7 +115,7 @@ export default function HeroSection({ slides = [] }: Props) {
               text-4xl sm:text-4xl lg:text-5xl
               font-bold
               mb-6
-              px-6 py-4
+              px-3 py-2 sm:px-6 sm:py-4
               border-2
               whitespace-pre-line
             "
@@ -185,28 +185,28 @@ export default function HeroSection({ slides = [] }: Props) {
         </div>
 
         {/* ---------------- STATS ---------------- */}
-        <div className="mt-12 flex items-center gap-12 text-white">
-          <div className="flex items-start gap-4">
+        <div className="mt-12 flex items-center gap-6 text-white">
+          <div className="flex items-start gap-3">
             <div className="w-[1.5px] h-14 bg-white/60" />
             <div>
-              <div className="text-3xl font-semibold">2,635</div>
-              <div className="text-sm text-gray-300">projects done</div>
+              <div className="text-3xl font-semibold">4,200</div>
+              <div className="text-sm text-gray-300 whitespace-nowrap">Doors Manufactured</div>
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-3">
             <div className="w-[1.5px] h-14 bg-white/60" />
             <div>
-              <div className="text-3xl font-semibold">129</div>
-              <div className="text-sm text-gray-300">total clients</div>
+              <div className="text-3xl font-semibold">1250+</div>
+              <div className="text-sm text-gray-300 whitespace-nowrap">Happy Customers</div>
             </div>
           </div>
 
-          <div className="flex items-start gap-4">
+          <div className="flex items-start gap-3">
             <div className="w-[1.5px] h-14 bg-white/60" />
             <div>
-              <div className="text-3xl font-semibold">30+</div>
-              <div className="text-sm text-gray-300">designers</div>
+              <div className="text-3xl font-semibold">25+</div>
+              <div className="text-sm text-gray-300 whitespace-nowrap">Years Experience</div>
             </div>
           </div>
         </div>
