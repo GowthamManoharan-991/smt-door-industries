@@ -190,15 +190,15 @@ export default function HeroSection({ slides = [] }: Props) {
             <div className="w-[1.5px] h-14 bg-white/60" />
             <div>
               <div className="text-3xl font-semibold">4,200</div>
-              <div className="text-sm text-gray-300 whitespace-nowrap">Doors Manufactured</div>
+              <div className="text-sm text-gray-300">Doors Manufactured</div>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
             <div className="w-[1.5px] h-14 bg-white/60" />
             <div>
-              <div className="text-3xl font-semibold">1250+</div>
-              <div className="text-sm text-gray-300 whitespace-nowrap">Happy Customers</div>
+              <div className="text-3xl font-semibold">1,250</div>
+              <div className="text-sm text-gray-300">Happy Customers</div>
             </div>
           </div>
 
@@ -206,7 +206,7 @@ export default function HeroSection({ slides = [] }: Props) {
             <div className="w-[1.5px] h-14 bg-white/60" />
             <div>
               <div className="text-3xl font-semibold">25+</div>
-              <div className="text-sm text-gray-300 whitespace-nowrap">Years Experience</div>
+              <div className="text-sm text-gray-300">Years Experience</div>
             </div>
           </div>
         </div>
