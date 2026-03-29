@@ -117,6 +117,7 @@ sections:
         label: Know More
         url: /about
         style: secondary
+        className: 'shadow-[0_12px_24px_rgba(150,150,150,0.2)] hover:shadow-[0_15px_30px_rgba(150,150,150,0.3)] transition-all duration-300'
 
     media:
       type: ImageBlock

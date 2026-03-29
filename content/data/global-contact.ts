@@ -39,9 +39,19 @@ text: `
   <span class="text-xl">✉️</span>
   <div>
     <strong>Email</strong><br/>
-    example@email.com
+    example@email.com<br/><br/>
   </div>
 </div>
+
+<div class="flex items-start gap-4">
+  <span class="text-xl">🕒</span>
+  <div>
+    <strong>Business Hours</strong><br/>
+    Monday - Saturday<br/>
+    9:00 AM to 6:00 PM
+  </div>
+</div>
+
 `,
 
 media: {
@@ -51,6 +61,8 @@ media: {
   elementId: 'contact-form',
   styles: {
     self: {
+      display: 'flex',        // Force Flexbox
+      flexWrap: 'wrap',       // Allow items to sit side-by-side
       padding: ['pt-5', 'pb-5', 'pl-10', 'pr-10'],
       backgroundColor: 'bg-dark',
       borderRadius: 'small',
@@ -99,7 +111,8 @@ media: {
       placeholder: 'Select Door Category',
       hideLabel: true,
       isRequired: true,
-      width: 'full',
+      width: 'full', // Use Tailwind fraction or 'calc(50% - 8px)'
+      
       options: [
         { label: 'Teak Wood Door', value: 'Teak Wood Door' },
         { label: 'Mahogany Door', value: 'Mahogany Door' },
@@ -108,6 +121,44 @@ media: {
         { label: 'UPVC Door', value: 'UPVC Door' },
         { label: 'WPC Door', value: 'WPC Door' },
         { label: 'Designer Main Door', value: 'Designer Main Door' }
+      ]
+    },
+    {
+      __metadata: { modelName: 'CategoryFormControl' },
+      name: 'category',
+      label: 'Window Category',
+      placeholder: 'Select Window Category',
+      hideLabel: true,
+      isRequired: true,
+      width: '1/2', // Use Tailwind fraction or 'calc(50% - 8px)'
+      className: 'w-full md:w-[calc(50%-8px)]', // Force desktop width
+      options: [
+        { label: 'Wooden Windows', value: 'Wooden Windows' },
+        { label: 'UPVC Windows', value: 'UPVC Windows' },
+        { label: 'Steel Windows', value: 'Steel Windows' },
+        { label: 'WPC Windows', value: 'WPC Windows' },
+        
+      ]
+    },
+    {
+      __metadata: { modelName: 'CategoryFormControl' },
+      name: 'category',
+      label: 'Hardware Category',
+      placeholder: 'Select Hardware Category',
+      hideLabel: true,
+      isRequired: true,
+      width: '1/2', // Use Tailwind fraction or 'calc(50% - 8px)'
+      className: 'w-full md:w-[calc(50%-8px)]', // Force desktop width
+      options: [
+        { label: 'Locks', value: 'Locks' },
+        { label: 'Handles', value: 'Handles' },
+        { label: 'Hinges', value: 'Hinges' },
+        { label: 'Tower Bolt', value: 'Tower Bolt' },
+        { label: 'Aldrop', value: 'Aldrop' },
+        { label: 'Ornaments', value: 'Ornaments' },
+        { label: 'Door Stopper', value: 'Door Stopper' },
+        { label: 'Safety Latches', value: 'Safety Latches' },
+        { label: 'Others', value: 'Others' }
       ]
     }
   ],

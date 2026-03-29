@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import axios from "axios";
 
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
@@ -49,21 +48,36 @@ export async function POST(req: Request) {
     });
 
     /* =========================
-       3️⃣ WhatsApp Notification
+       3️⃣ WhatsApp Notification (Meta API)
     ========================== */
 
-    const message = `🚨 New Website Lead
-
-Name: ${name}
-Phone: ${phone}
-Email: ${email}
-Category: ${category}`;
-
-    await axios.get(
-      `https://api.callmebot.com/whatsapp.php?phone=918778671907&text=${encodeURIComponent(
-        message
-      )}&apikey=${process.env.WHATSAPP_API_KEY}`
-    );
+    await fetch(`https://graph.facebook.com/v18.0/${process.env.META_PHONE_NUMBER_ID}/messages`, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${process.env.META_ACCESS_TOKEN}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        messaging_product: "whatsapp",
+        to: process.env.MY_WHATSAPP_NUMBER,
+        type: "template",
+        template: {
+          name: "smt_door_new_lead", // your approved template name
+          language: { code: "en" },
+          components: [
+            {
+              type: "body",
+              parameters: [
+                { type: "text", parameter_name: "customer_name", text: name },
+                { type: "text", parameter_name: "customer_email", text: email },
+                { type: "text", parameter_name: "customer_phone", text: phone },
+                { type: "text", parameter_name: "category", text: category }
+              ]
+            }
+          ]
+        }
+      })
+    });
 
     return NextResponse.json({ success: true });
 

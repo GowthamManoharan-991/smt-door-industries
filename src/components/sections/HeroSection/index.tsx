@@ -81,8 +81,9 @@ export default function HeroSection({ slides = [] }: Props) {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.85) 20%, rgba(0,0,0,0.25) 60%, rgba(0,0,0,0) 100%)",
+            "linear-gradient(90deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)",
         }}
+
       />
 
       {/* ---------------- CONTENT ---------------- */}
@@ -100,8 +101,8 @@ export default function HeroSection({ slides = [] }: Props) {
         {/* ---------- SMALL TAG ABOVE HEADING ---------- */}
         {activeSlide.tag && (
           <div
-            className="mb-3 text-lg sm:text-sm lg:text-lg font-bold  tracking-[0.35em] sm:tracking-[0.25em] lg:tracking-[0.75em] uppercase"
-            style={{ color: "#D4AF37" }}
+            className="mb-2 tracking-[0.3em] text-base sm:tracking-[0.25em] lg:tracking-[0.4em] uppercase"
+            style={{ color: "#C9A227" }}
           >
             {activeSlide.tag}
           </div>
@@ -120,10 +121,11 @@ export default function HeroSection({ slides = [] }: Props) {
               whitespace-pre-line
             "
             style={{
-              fontFamily: "'Futura STD', sans-serif",
-              lineHeight: "1.4",          // ✅ reliable line-height
+              fontFamily: "'Playfair Display', serif",
+              lineHeight: "1.2",          // ✅ reliable line-height
+              borderColor: "#C9A227",
               color: "#FFFFFF",
-              borderColor: "#D4AF37",     // classy gold
+              boxShadow: "0 0 25px rgba(201,162,39,0.25)",     // classy gold
             }}
           >
             {activeSlide.title}
@@ -132,7 +134,7 @@ export default function HeroSection({ slides = [] }: Props) {
 
         {/* ---------- SUBTITLE ---------- */}
         {activeSlide.subtitle && (
-          <p className="text-base sm:text-lg lg:text-xl mb-8">
+          <p className="text-sm sm:text-base lg:text-lg tracking-wide mb-8">
             {activeSlide.subtitle}
           </p>
         )}
@@ -142,7 +144,7 @@ export default function HeroSection({ slides = [] }: Props) {
           {activeSlide.actions?.[0] && (
             <a
               href={activeSlide.actions[0].url}
-              className="bg-white text-black text-[15px] font-medium py-3.5 px-9 rounded-lg hover:bg-gray-200 transition"
+              className="bg-white shadow-[0_4px_20px_0_rgba(255,255,255,0.15)] hover:shadow-[0_4px_25px_0_rgba(255,255,255,0.25)] hover:-translate-y-0.5 text-black text-[15px] font-medium py-3.5 px-9 rounded-lg hover:bg-gray-200 transition"
             >
               {activeSlide.actions[0].label}
             </a>
@@ -155,11 +157,12 @@ export default function HeroSection({ slides = [] }: Props) {
                 group inline-flex items-center gap-3
                 px-7 py-3.5
                 rounded-[10px]
-                bg-white/10
+                bg-white/20
                 border border-white/20
                 text-white text-[14px] sm:text-[14px] lg:text-[15px] font-medium
                 backdrop-blur-md
-                shadow-lg shadow-black/30
+                shadow-[0_8px_20px_rgba(255,255,255,0.1)]
+                
                 hover:bg-white/15 hover:border-white/40
                 transition-all duration-300
               "

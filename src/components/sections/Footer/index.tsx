@@ -28,7 +28,7 @@ export default function Footer(props) {
                 'sb-component-footer',
                 colors,
                 styles?.self?.margin ? mapStyles({ padding: styles?.self?.margin }) : undefined,
-                styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : 'px-4 py-28'
+                styles?.self?.padding ? mapStyles({ padding: styles?.self?.padding }) : 'px-4 py-10'
             )}
             {...(enableAnnotations && { 'data-sb-object-id': props?.__metadata?.id })}
         >
@@ -72,7 +72,7 @@ export default function Footer(props) {
 
     <ul className="flex flex-wrap items-center">
       {socialLinks.links.map((link, index) => (
-        <li key={index} className="text-2xl mb-2 mr-8 lg:mr-10 last:mr-0">
+        <li key={index} className="text-2xl mb-2 mr-4 lg:mr-6 last:mr-0">
           <Social
             {...link}
             {...(enableAnnotations && { 'data-sb-field-path': `.links.${index}` })}
