@@ -16,7 +16,7 @@ export default function WhyChooseUsSection(props) {
       <div className="mx-auto max-w-7xl px-6 text-center">
         {/* Eyebrow */}
         {eyebrow && (
-          <p className="text-sm tracking-widest text-amber-500 uppercase">
+          <p className="text-sm tracking-widest text-amber-500 font-extrabold uppercase">
             {eyebrow}
           </p>
         )}

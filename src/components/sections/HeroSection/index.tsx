@@ -101,7 +101,7 @@ export default function HeroSection({ slides = [] }: Props) {
         {/* ---------- SMALL TAG ABOVE HEADING ---------- */}
         {activeSlide.tag && (
           <div
-            className="mb-2 tracking-[0.3em] text-base sm:tracking-[0.25em] lg:tracking-[0.4em] uppercase"
+            className="mb-2 tracking-[0.3em] text-base sm:text-lg sm:tracking-[0.25em] lg:tracking-[0.35em] font-medium uppercase"
             style={{ color: "#C9A227" }}
           >
             {activeSlide.tag}
@@ -190,7 +190,7 @@ export default function HeroSection({ slides = [] }: Props) {
         {/* ---------------- STATS ---------------- */}
         <div className="mt-12 flex items-center gap-6 text-white">
           <div className="flex items-start gap-3">
-            <div className="w-[1.5px] h-14 bg-white/60" />
+            <div className="w-[1.5px] self-stretch bg-white/60" />
             <div>
               <div className="text-3xl font-semibold">4,200</div>
               <div className="text-sm text-gray-300">Doors Manufactured</div>
@@ -198,7 +198,7 @@ export default function HeroSection({ slides = [] }: Props) {
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="w-[1.5px] h-14 bg-white/60" />
+            <div className="w-[1.5px] self-stretch bg-white/60" />
             <div>
               <div className="text-3xl font-semibold">1,250</div>
               <div className="text-sm text-gray-300">Happy Customers</div>
@@ -206,7 +206,7 @@ export default function HeroSection({ slides = [] }: Props) {
           </div>
 
           <div className="flex items-start gap-3">
-            <div className="w-[1.5px] h-14 bg-white/60" />
+            <div className="w-[1.5px] self-stretch bg-white/60" />
             <div>
               <div className="text-3xl font-semibold">25+</div>
               <div className="text-sm text-gray-300">Years Experience</div>

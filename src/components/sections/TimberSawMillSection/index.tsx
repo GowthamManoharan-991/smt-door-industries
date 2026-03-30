@@ -38,7 +38,7 @@ export default function TimberSawMillSection({
         {/* LEFT CONTENT */}
         <div>
           {eyebrow && (
-            <span className="text-sm uppercase tracking-widest text-amber-500">
+            <span className="text-sm uppercase font-extrabold tracking-widest text-amber-500">
               {eyebrow}
             </span>
           )}

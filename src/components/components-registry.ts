@@ -58,6 +58,7 @@ const components = {
     FeaturedItem: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItem')),
     FeaturedItemToggle: dynamic(() => import('./sections/FeaturedItemsSection/FeaturedItemToggle')),
     FeaturedItemsSection: dynamic(() => import('./sections/FeaturedItemsSection')),
+    FeaturedFrameSection: dynamic(() => import('./sections/FeaturedFrameSection')),
     FeaturedPeopleSection: dynamic(() => import('./sections/FeaturedPeopleSection')),
     FeaturedPostsSection: dynamic(() => import('./sections/FeaturedPostsSection')),
     FormBlock: dynamic(() => import('./blocks/FormBlock')),

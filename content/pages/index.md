@@ -328,48 +328,76 @@ sections:
           No need to install anything else.
         icon: layers
 
-  - subtitle: Award winning enterprises trust us
-    images:
-      - url: /images/empathy-logo.svg
-        altText: Empathy logo
-        type: ImageBlock
-      - url: /images/wellster-logo.svg
-        altText: Wellster logo
-        type: ImageBlock
-      - url: /images/vise-logo.svg
-        altText: Vise logo
-        type: ImageBlock
-      - url: /images/telus-logo.svg
-        altText: Telus logo
-        type: ImageBlock
-      - url: /images/contenful-logo.svg
-        altText: Contentful logo
-        type: ImageBlock
-      - url: /images/sanity-logo.svg
-        altText: Sanity logo
-        type: ImageBlock
-      - url: /images/rangle-logo.svg
-        altText: Rangle logo
-        type: ImageBlock
-    motion: move-to-left
+  - type: FeaturedFrameSection
+    elementId: best-selling-doors
     colors: bg-light-fg-dark
-    styles:
-      self:
-        justifyContent: center
-      subtitle:
-        textAlign: center
-    type: ImageGallerySection
 
-  - title: Divider
-    colors: bg-light-fg-dark
-    styles:
-      self:
-        padding:
-          - pt-2
-          - pl-2
-          - pb-2
-          - pr-2
-    type: DividerSection
+    eyebrow:
+      text: Our Creations
+
+    heading:
+      type: TitleBlock
+      text: Premium Wooden Frame Collection
+      color: text-dark
+
+    subheading:
+      text: Experience the beauty of handcrafted wooden Nilavu frames.
+
+    layout:
+      columns: 4
+      responsive:
+        mobile: 2
+        tablet: 3
+        desktop: 4
+
+    items:
+      - id: reza
+        title: Classic Minimal Wooden Frame
+        description: Sophisticated grid-patterned Nilavu design, perfect for modern interiors seeking a traditional touch.
+        image: /images/A2.png
+        alt: Classic Minimal Wooden Frame
+        highlight: false
+
+      - id: elements-1
+        title: Royal Floral Carved Frame
+        description: Grand Dravidian-style artistry featuring intricate floral motifs and a majestic Lakshmi crest.
+        image: /images/A5.png
+        alt: Elements Door Design
+        highlight: false
+
+      - id: elements-2
+        title: Temple Style Grand Frame
+        description: Exquisite craftsmanship with tiered temple carvings that create a spiritual and elegant aura.
+        image: /images/A1.png
+        alt: Elements Wooden Door
+        highlight: false
+
+      - id: elements-3
+        title: Heritage Arch Wooden Frame
+        description: Timeless South Indian heritage featuring a distinctive inner arch and Ganesha center carving.
+        image: /images/A6.png
+        alt: Elements Premium Door
+        highlight: false
+
+      - id: elements-4
+        title: Premium Traditional Wooden Frame
+        description: Robust, high-quality frame adorned with continuous decorative carvings and a deep grain finish.
+        image: /images/A3.png
+        alt: Elements Premium Door
+        highlight: false
+
+    hoverEffects:
+      zoom: true
+      lift: true
+      shadow: true
+
+    divider:
+      enabled: true
+      style: line
+      color: border-gray-300
+
+    cta:
+      enabled: false
 
   - type: ManufacturingSection
     elementId: timber-timeline
@@ -497,29 +525,36 @@ sections:
 
   - type: TestimonialCarousel
     motion: move-to-left
+    heading: Our customers love what we do
+    description: >
+      With over 26 years of excellence, we’ve helped thousands of families across Tamil Nadu find the perfect wooden frames for their dream homes.
+    actions:
+      - label: Explore Our Legacy
+        url: /stories
+        style: secondary
     testimonials:
-      - name: Nill Smith
-        role: Financial Director
-        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+      - name: Kavitha
+        role: House Owner
+        quote: High quality wooden doors at affordable prices. The fitting was perfect and the team was very responsive. On-time delivery and neat installation – totally worth it!
         avatar: /images/person1.jpg
 
-      - name: Merry Kinlly
-        role: Chief Accountant
-        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+      - name: Kalai ram
+        role: Home Builder
+        quote: Ordered bed room doors from them and the quality is excellent. Smooth opening and closing, no noise, and the colour perfectly matches my interiors. Delivery was on time as promised.
         avatar: /images/person2.jpg
 
-      - name: Merry Kinlly
-        role: Chief Accountant
-        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+      - name: Gowtham
+        role: Home Builder
+        quote: Their wood carving machines work so precisely – the designs on my doors came out beautiful. Very professional team, quick response and timely delivery of the product.
         avatar: /images/person2.jpg
 
-      - name: Merry Kinlly
-        role: Chief Accountant
-        quote: Sample quote. Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc
+      - name: Tamilarasan
+        role: Project Architect
+        quote: Loved the wood front door with glass panels they suggested. It brings in natural light and still feels very secure. Professional measurement, neat fitting and on-time handover.
         avatar: /images/person2.jpg
 
 seo:
-  metaTitle: Home - Demo site
+  metaTitle: Home
   metaDescription: This demo site is built with Netlify Create.
   socialImage: /images/main-hero.jpg
   type: Seo

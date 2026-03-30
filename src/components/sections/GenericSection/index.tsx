@@ -103,7 +103,7 @@ export default function GenericSection(props) {
 {badge?.label && (
     <p
         className={classNames(
-            "uppercase font-medium",
+            "uppercase font-extrabold",
             "tracking-[0.15em]",   // more spacing
             "text-[14px] sm:text-[15px]",
             isHero ? "text-white/80" : "text-[#6B7280]" // soft grey like design
