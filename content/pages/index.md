@@ -554,8 +554,8 @@ sections:
         avatar: /images/person2.jpg
 
 seo:
-  metaTitle: Home
-  metaDescription: This demo site is built with Netlify Create.
+  metaTitle: Door Manufacturers in India | PVC, Wooden & Flush Doors Supplier
+  metaDescription: Leading door manufacturers in India offering high-quality PVC, wooden, and flush doors. Durable, stylish, and affordable doors for homes and commercial spaces.
   socialImage: /images/main-hero.jpg
   type: Seo
 type: PageLayout

@@ -66,25 +66,39 @@ export default function HeroSection({ slides = [] }: Props) {
   {slides.map((slide, index) => (
     <div
       key={index}
-      className="hero-bg absolute inset-0 bg-cover bg-no-repeat bg-right sm:bg-right lg:bg-center"
-      style={{
-        backgroundImage: `url(${slide.image})`,
-        opacity: index === currentIndex ? 1 : 0,
-        transition: "opacity 1000ms ease",
-        pointerEvents: "none",
-      }}
+      className="hero-bg absolute inset-0 bg-cover bg-no-repeat lg:bg-center"
+style={{
+  backgroundImage: `url(${slide.image})`,
+  opacity: index === currentIndex ? 1 : 0,
+  transition: "opacity 1000ms ease",
+  pointerEvents: "none",
+  // Add this line below to force the focus to the right 15% of the image on mobile
+  backgroundPosition: "70% center", 
+}}
+      
     />
   ))}
 </div>
-      {/* ---------------- OVERLAY ---------------- */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(90deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)",
-        }}
+     {/* ---------------- OVERLAY SECTION ---------------- */}
 
-      />
+{/* 1. MOBILE OVERLAY: Visible only on small screens. Fully covers the image with dark tint. */}
+<div 
+  className="absolute inset-0 z-[1] block lg:hidden" 
+  style={{ 
+    backgroundColor: "rgba(0,0,0,0.9)", 
+    pointerEvents: "none" 
+  }} 
+/>
+
+{/* 2. DESKTOP OVERLAY: Visible only on large screens. Fades from dark to transparent. */}
+<div 
+  className="absolute inset-0 z-[1] hidden lg:block" 
+  style={{ 
+    background: "linear-gradient(90deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.85) 30%, rgba(0,0,0,0.4) 60%, rgba(0,0,0,0) 100%)", 
+    pointerEvents: "none" 
+  }} 
+/>
+      
 
       {/* ---------------- CONTENT ---------------- */}
       <div

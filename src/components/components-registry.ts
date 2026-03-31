@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
 import DoorInstallationProcess from './sections/DoorInstallationProcess';
+import ScrollToTop from './ScrollToTop';
 
 
 
@@ -61,6 +62,7 @@ const components = {
     FeaturedFrameSection: dynamic(() => import('./sections/FeaturedFrameSection')),
     FeaturedPeopleSection: dynamic(() => import('./sections/FeaturedPeopleSection')),
     FeaturedPostsSection: dynamic(() => import('./sections/FeaturedPostsSection')),
+    ScrollToTop: dynamic(() => import('./ScrollToTop')),
     FormBlock: dynamic(() => import('./blocks/FormBlock')),
     GenericSection: dynamic(() => import('./sections/GenericSection')),
     ImageBlock: dynamic(() => import('./blocks/ImageBlock')),

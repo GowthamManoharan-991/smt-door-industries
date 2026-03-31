@@ -88,6 +88,7 @@ export default function FeaturedFrameSection(props: FeaturedFrameSectionProps) {
               )}
             </div>
           ))}
+          
 
         </div>
       </div>

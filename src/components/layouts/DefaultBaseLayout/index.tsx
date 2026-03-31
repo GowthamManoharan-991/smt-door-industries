@@ -4,6 +4,8 @@ import Header from '../../sections/Header';
 import Footer from '../../sections/Footer';
 import { globalContactSection } from '../../../../content/data/global-contact';
 import { getComponent } from 'src/components/components-registry';
+import ScrollToTop from '@/components/ScrollToTop';
+
 
 
 export default function DefaultBaseLayout(props) {
@@ -23,7 +25,10 @@ export default function DefaultBaseLayout(props) {
         {SectionComponent && (
           <SectionComponent {...globalContactSection} />
         )}
-                {site.footer && <Footer {...site.footer} enableAnnotations={enableAnnotations} />}
+                {site.footer && <Footer {...site.footer} enableAnnotations={enableAnnotations}
+                 />}
+                 {/* ✅ SCROLL TO TOP BUTTON (FIXED POSITION) */}
+        <ScrollToTop />
             </div>
         </div>
     );

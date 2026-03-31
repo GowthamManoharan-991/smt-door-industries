@@ -37,7 +37,7 @@ export default function DoorInstallationProcess({
   timeline,
 }: DoorInstallationProps) {
   if (!timeline?.steps?.length) return null;
-
+  
   return (
     <section className="relative bg-white text-gray-900 py-12 lg:py-20">
       <div className="container mx-auto px-8 sm:px-4 lg:px-24">

@@ -4,7 +4,7 @@
         "altText": "Logo light",
         "type": "ImageBlock"
     },
-    "text": "A description of your brand",
+    "text": "All Under One Roof",
     "primaryLinks": {
     "title": "Doors",
     "links": [
@@ -166,13 +166,13 @@
         {
             "altText": "GitHub link",
             "url": "https://github.com/netlify",
-            "icon": "github",
+            "icon": "facebook",
             "type": "Social"
         },
         {
             "altText": "Twitter link",
             "url": "https://twitter.com/netlify",
-            "icon": "twitter",
+            "icon": "instagram",
             "type": "Social"
         },
         {
