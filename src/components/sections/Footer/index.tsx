@@ -65,7 +65,7 @@ export default function Footer(props) {
                     {socialLinks?.links?.length > 0 && (
   <div className="pb-8" {...(enableAnnotations && { 'data-sb-field-path': 'socialLinks' })}>
     {socialLinks.title && (
-      <h2 className="uppercase text-base tracking-wide mb-7">
+      <h2 className="uppercase text-base tracking-wide mb-7 font-medium text-amber-500">
         {socialLinks.title}
       </h2>
     )}
@@ -90,7 +90,7 @@ export default function Footer(props) {
                             <ul className="flex flex-wrap mb-3" {...(enableAnnotations && { 'data-sb-field-path': 'legalLinks' })}>
                                 {legalLinks.map((link, index) => (
                                     <li key={index} className="mb-1 mr-6 last:mr-0">
-                                        <Action {...link} className="text-sm" {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
+                                        <Action {...link} className="text-sm transition-colors hover:text-amber-500" {...(enableAnnotations && { 'data-sb-field-path': `.${index}` })} />
                                     </li>
                                 ))}
                             </ul>
@@ -98,7 +98,7 @@ export default function Footer(props) {
                         {copyrightText && (
                             <Markdown
                                 options={{ forceInline: true, forceWrapper: true, wrapper: 'p' }}
-                                className={classNames('sb-markdown', 'text-sm', 'mb-4', { 'sm:order-first sm:mr-12': legalLinks.length > 0 })}
+                                className={classNames('sb-markdown text-sm mb-4 [&_a]:transition-colors [&_a]:underline hover:[&_a]:text-amber-500', { 'sm:order-first sm:mr-12': legalLinks.length > 0 })}
                                 {...(enableAnnotations && { 'data-sb-field-path': 'copyrightText' })}
                             >
                                 {copyrightText}
@@ -120,7 +120,7 @@ function FooterLinksGroup(props) {
     return (
         <div className="pb-8" data-sb-field-path={fieldPath}>
             {title && (
-                <h2 className="uppercase text-base tracking-wide" {...(fieldPath && { 'data-sb-field-path': '.title' })}>
+                <h2 className="uppercase text-base tracking-wide font-medium text-amber-500" {...(fieldPath && { 'data-sb-field-path': '.title' })}>
                     {title}
                 </h2>
             )}
@@ -128,7 +128,7 @@ function FooterLinksGroup(props) {
                 <ul className={classNames('space-y-3', { 'mt-7': title })} {...(fieldPath && { 'data-sb-field-path': '.links' })}>
                     {links.map((link, index) => (
                         <li key={index}>
-                            <Action {...link} className="text-sm" {...(fieldPath && { 'data-sb-field-path': `.${index}` })} />
+                            <Action {...link} className="text-sm transition-colors hover:text-amber-500" {...(fieldPath && { 'data-sb-field-path': `.${index}` })} />
                         </li>
                     ))}
                 </ul>
