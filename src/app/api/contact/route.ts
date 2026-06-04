@@ -7,9 +7,15 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
 
-    const { name, email, phone, category } = body;
+    const { name, email, phone, doorCategory, windowCategory, hardwareCategory } = body;
 
-    /* =========================
+    // Helper fallback strings to display if a user leaves a section blank
+    const doorSelected = doorCategory || "None";
+    const windowSelected = windowCategory || "None";
+    const hardwareSelected = hardwareCategory || "None";
+    const summaryCategoryText = `Doors: ${doorSelected} | Windows: ${windowSelected} | Hardware: ${hardwareSelected}`;
+
+    /* ========================= 
        1️⃣ Email to You
     ========================== */
 
@@ -22,28 +28,34 @@ export async function POST(req: Request) {
       <p><b>Name:</b> ${name}</p>
       <p><b>Email:</b> ${email}</p>
       <p><b>Phone:</b> ${phone}</p>
-      <p><b>Category:</b> ${category}</p>
+      <p><b>Door Category:</b> ${doorCategory}</p>
+      <p><b>Window Category:</b> ${windowCategory}</p>
+      <p><b>Hardware Category:</b> ${hardwareCategory}</p>
       `,
     });
 
     /* =========================
        2️⃣ Auto Reply to Customer
     ========================== */
-
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "onboarding@resend.dev", // Once domain is verified change to "info@smtdoorindustries.com"
       to: [email],
       subject: "Thank you for contacting SMT Door Industries",
       html: `
       <h2>Thank you ${name} 🙏</h2>
-      <p>We received your enquiry for <b>${category}</b>.</p>
-      <p>Our team will contact you shortly.</p>
-
+      <p>We have successfully received your enquiry regarding our custom building solutions.</p>
+      <p><b>Your Recorded Selections:</b></p>
+      <ul>
+        <li><b>Doors:</b> ${doorSelected}</li>
+        <li><b>Windows:</b> ${windowSelected}</li>
+        <li><b>Hardware:</b> ${hardwareSelected}</li>
+      </ul>
+      <p>Our engineering team will look into your custom specs and contact you shortly.</p>
       <br/>
-
+      <p>Best Regards,</p>
       <p><b>SMT Door Industries</b></p>
       <p>📞 +91 87544 70389</p>
-      <p>📍 Coimbatore</p>
+      <p>📍 Coimbatore, Tamil Nadu</p>
       `,
     });
 
@@ -71,7 +83,7 @@ export async function POST(req: Request) {
                 { type: "text", parameter_name: "customer_name", text: name },
                 { type: "text", parameter_name: "customer_email", text: email },
                 { type: "text", parameter_name: "customer_phone", text: phone },
-                { type: "text", parameter_name: "category", text: category }
+                { type: "text", parameter_name: "category", text: summaryCategoryText }
               ]
             }
           ]

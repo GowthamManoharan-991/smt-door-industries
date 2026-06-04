@@ -22,8 +22,15 @@ text: `
   <span class="text-xl">🏠</span>
   <div>
     <strong>Address</strong><br/>
+    <a 
+      href="https://maps.google.com/?q=SMT+Door+Industries+Coimbatore" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="hover:underline dark:text-blue-400"
+    >
     313/1, Thoppampalayam Road, Myleripalayam,<br/>
     Ottakkalmandapam, Coimbatore, Tamil Nadu - 641032<br/><br/>
+    </a>
   </div>
 </div>
 
@@ -31,8 +38,9 @@ text: `
   <span class="text-xl">📞</span>
   <div>
     <strong>Phone</strong><br/>
-    <a href="tel:+918754470389" class="hover:underline text-blue-600 dark:text-blue-400">
+    <a href="tel:+918754470389" class="hover:underline dark:text-blue-400">
     +91 87544 70389<br/><br/>
+    </a>
   </div>
 </div>
 
@@ -40,7 +48,9 @@ text: `
   <span class="text-xl">✉️</span>
   <div>
     <strong>Email</strong><br/>
+    <a href="mailto:info@smtdoorindustries.com" class="hover:underline dark:text-blue-400">
     info@smtdoorindustries.com<br/><br/>
+    </a>
   </div>
 </div>
 
