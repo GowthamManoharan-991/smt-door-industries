@@ -21,7 +21,7 @@
             "links": [
                 {
                     "label": "Teak Wood Doors",
-                    "url": "/doors",
+                    "url": "/teak-wooden-doors",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
@@ -29,23 +29,23 @@
                 },
                 {
                     "label": "Mahogany Doors",
-                    "url": "/",
+                    "url": "/mahogany-wooden-doors",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
                 },
-                {
-                    "label": "Main Doors",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
+               {
                     "label": "Pooja Room Doors",
-                    "url": "/",
+                    "url": "/pooja-room-wooden-doors",
+                    "icon": "arrowRight",
+                    "iconPosition": "right",
+                    "style": "secondary",
+                    "type": "Link"
+                },
+                {
+                    "label": "UPVC Doors",
+                    "url": "/upvc-doors",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
@@ -53,55 +53,23 @@
                 },
                 {
                     "label": "Bedroom Doors",
-                    "url": "/",
+                    "url": "/bedroom-doors",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
                 },
                 {
-                    "label": "Kitchen Doors",
-                    "url": "/",
+                    "label": "WPC Doors",
+                    "url": "/wpc-doors",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
                 },
                 {
-                    "label": "Balcony Doors",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
-                    "label": "Terrace Doors",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
-                    "label": "Office Doors",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
-                    "label": "Bathroom Doors",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
-                    "label": "Glass Doors",
-                    "url": "/",
+                    "label": "Custom Layouts",
+                    "url": "/custom-layouts",
                     "icon": "arrowRight",
                     "iconPosition": "right",
                     "style": "secondary",

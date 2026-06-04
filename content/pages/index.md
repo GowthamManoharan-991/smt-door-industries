@@ -11,9 +11,9 @@ sections:
         subtitle: Your home deserves the best design.
         actions:
           - label: Contact Now
-            url: /
+            url: "https://wa.me/918754470389?text=Hi,%20I'm%20interested%20in%20your%20custom%20doors%20and%20windows."
           - label: Learn More
-            url: /
+            url: '#product-catalog'
 
       - image: /images/Hero2.png
         tag: CRAFTED
@@ -136,6 +136,7 @@ sections:
           textAlign: left
 
   - type: CategoryGridSection
+    elementId: product-catalog #
     heading:
       eyebrow: Architectural Excellence
       title: Find the Perfect Fit for Your Home

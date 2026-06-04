@@ -383,3 +383,7 @@
 .animate-fade-up {
   animation: fadeUp 700ms ease both;
 }
+
+html {
+  scroll-behavior: smooth !important;
+}

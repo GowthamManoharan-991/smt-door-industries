@@ -1,6 +1,6 @@
 ---
-title: Doors
-slug: /doors
+title: WPC Doors
+slug: /wpc-doors
 
 sections:
   - type: HeroSubpages
