@@ -117,7 +117,7 @@ media: {
     },
     {
       __metadata: { modelName: 'CategoryFormControl' },
-      name: 'category',
+      name: 'doorCategory',
       label: 'Door Category',
       placeholder: 'Select Door Category',
       hideLabel: true,
@@ -136,7 +136,7 @@ media: {
     },
     {
       __metadata: { modelName: 'CategoryFormControl' },
-      name: 'category',
+      name: 'windowCategory',
       label: 'Window Category',
       placeholder: 'Select Window Category',
       hideLabel: true,
@@ -153,7 +153,7 @@ media: {
     },
     {
       __metadata: { modelName: 'CategoryFormControl' },
-      name: 'category',
+      name: 'hardwareCategory',
       label: 'Hardware Category',
       placeholder: 'Select Hardware Category',
       hideLabel: true,
