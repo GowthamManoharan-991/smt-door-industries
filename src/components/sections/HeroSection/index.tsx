@@ -85,7 +85,7 @@ style={{
 <div 
   className="absolute inset-0 z-[1] block lg:hidden" 
   style={{ 
-    backgroundColor: "rgba(0,0,0,0.9)", 
+    background: "linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 50%, rgba(0, 0, 0, 0) 100%)",
     pointerEvents: "none" 
   }} 
 />
