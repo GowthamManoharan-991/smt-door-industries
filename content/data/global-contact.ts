@@ -31,6 +31,7 @@ text: `
   <span class="text-xl">📞</span>
   <div>
     <strong>Phone</strong><br/>
+    <a href="tel:+918754470389" class="hover:underline text-blue-600 dark:text-blue-400">
     +91 87544 70389<br/><br/>
   </div>
 </div>
@@ -39,7 +40,7 @@ text: `
   <span class="text-xl">✉️</span>
   <div>
     <strong>Email</strong><br/>
-    example@email.com<br/><br/>
+    info@smtdoorindustries.com<br/><br/>
   </div>
 </div>
 
