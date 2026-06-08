@@ -29,29 +29,35 @@ sections:
     height: half
 
     products:
-      - model: TK-101
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 101
+        image: /images/Main Door Teak Wood 1.webp
 
-      - model: TK-102
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 102
+        image: /images/Main Door Teak Wood 11.webp
 
-      - model: TK-103
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 103
+        image: /images/Main Door Teak Wood 3.webp
 
-      - model: TK-104
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 104
+        image: /images/Main Door Teak Wood 4.webp
 
-      - model: TK-101
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 105
+        image: /images/Main Door Teak Wood 5.webp
 
-      - model: TK-102
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 106
+        image: /images/Main Door Teak Wood 6.webp
 
-      - model: TK-103
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 107
+        image: /images/Main Door Teak Wood 7.webp
 
-      - model: TK-104
-        image: /images/Ca3.png
+      - model: Main Door Teak Wood - 108
+        image: /images/Main Door Teak Wood 8.webp
+
+      - model: Main Door Teak Wood - 109
+        image: /images/Main Door Teak Wood 9.webp
+
+      - model: Main Door Teak Wood - 110
+        image: /images/Main Door Teak Wood 10.webp
 
 seo:
   metaTitle: Doors | Premium Teak Wood Doors
