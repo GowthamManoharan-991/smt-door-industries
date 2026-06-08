@@ -98,22 +98,6 @@
                     "iconPosition": "right",
                     "style": "secondary",
                     "type": "Link"
-                },
-                {
-                    "label": "Steel Windows",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
-                },
-                {
-                    "label": "WPC Windows",
-                    "url": "/",
-                    "icon": "arrowRight",
-                    "iconPosition": "right",
-                    "style": "secondary",
-                    "type": "Link"
                 }
                
         ],
@@ -229,8 +213,8 @@
 },
         {
             "label": "About Us",
-            "altText": "Careers page",
-            "url": "/careers",
+            "altText": "About Us",
+            "url": "/about-us",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",

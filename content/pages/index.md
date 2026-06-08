@@ -163,20 +163,20 @@ sections:
           - type: Action
             label: Shop Now
             style: primary
-            url: /sofa
+            url: //teak-wooden-doors
 
-      - title: Mahagony Wood Doors
+      - title: Mahogany Wood Doors
         subtitle: Main Entrance Doors
         span: 1
         image:
           type: ImageBlock
           url: /images/Ca3.png
-          altText: Sneakers
+          altText: Mahogany Doors
         actions:
           - type: Action
             label: Shop Now
             style: primary
-            url: /sneakers
+            url: /mahogany-wooden-doors
 
       - title: Bedroom Doors
         subtitle: Membrane Doors
@@ -184,12 +184,12 @@ sections:
         image:
           type: ImageBlock
           url: /images/Ca5.png
-          altText: Door
+          altText: Bedroom Doors
         actions:
           - type: Action
             label: Shop Now
             style: primary
-            url: /toys
+            url: /bedroom-doors
 
       # ROW 2
       - title: UPVC Door
@@ -198,12 +198,12 @@ sections:
         image:
           type: ImageBlock
           url: /images/Ca6.png
-          altText: Toy Train
+          altText: UPVC Doors
         actions:
           - type: Action
             label: Shop Now
             style: primary
-            url: /toys
+            url: /upvc-doors
 
       - title: WPC Doors
         subtitle: Waterproof Bathroom Doors
@@ -211,12 +211,12 @@ sections:
         image:
           type: ImageBlock
           url: /images/Ca8.png
-          altText: Toy Train
+          altText: WPC Door
         actions:
           - type: Action
             label: Shop Now
             style: primary
-            url: /toys
+            url: /wpc-door
 
       - title: Pooja Room Doors
         subtitle: Teak door with brass patterns and small bells (mani)
@@ -225,12 +225,12 @@ sections:
         image:
           type: ImageBlock
           url: /images/Ca4.png
-          altText: Toy Train
+          altText: Pooja Room Doors
         actions:
           - type: Action
             label: Shop Now
             style: primary
-            url: /toys
+            url: /pooja-room-wooden-doors
 
   - type: TimberSawMillSection
     eyebrow: Timber & Saw Mill
