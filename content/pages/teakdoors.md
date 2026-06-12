@@ -33,7 +33,7 @@ sections:
         image: /images/Main Door Teak Wood 1.webp
 
       - model: Main Door Teak Wood - 102
-        image: /images/Main Door Teak Wood 11.webp
+        image: /images/Main Door Teak Wood 12.webp
 
       - model: Main Door Teak Wood - 103
         image: /images/Main Door Teak Wood 3.webp

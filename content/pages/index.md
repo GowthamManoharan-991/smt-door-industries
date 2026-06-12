@@ -11,7 +11,7 @@ sections:
         subtitle: Your home deserves the best design.
         actions:
           - label: Contact Now
-            url: "https://wa.me/918754470389?text=Hi,%20I'm%20interested%20in%20your%20custom%20doors%20and%20windows."
+            url: "https://wa.me/919791974780?text=Hi,%20I'm%20interested%20in%20your%20custom%20doors%20and%20windows."
           - label: Learn More
             url: '#product-catalog'
 
@@ -121,8 +121,8 @@ sections:
 
     media:
       type: ImageBlock
-      url: /images/About.png
-      mobileImage: /images/Ab.jpeg
+      url: /images/teak wood single door designs.webp
+      mobileImage: /images/main door teak wood mobile.webp
       altText: Premium Door Collection
       styles:
       self:
@@ -157,7 +157,7 @@ sections:
         backgroundColor: '#e6f4fb'
         image:
           type: ImageBlock
-          url: /images/Ca2.png
+          url: /images/main door teak wood.webp
           altText: Teak Wood Door
         actions:
           - type: Action
@@ -170,7 +170,7 @@ sections:
         span: 1
         image:
           type: ImageBlock
-          url: /images/Ca3.png
+          url: /images/wood entrance doors.webp
           altText: Mahogany Doors
         actions:
           - type: Action
@@ -183,7 +183,7 @@ sections:
         span: 1
         image:
           type: ImageBlock
-          url: /images/Ca5.png
+          url: /images/membrane door.webp
           altText: Bedroom Doors
         actions:
           - type: Action
@@ -197,7 +197,7 @@ sections:
         span: 1
         image:
           type: ImageBlock
-          url: /images/Ca6.png
+          url: /images/hardwood bedroom doors.webp
           altText: UPVC Doors
         actions:
           - type: Action
@@ -210,7 +210,7 @@ sections:
         span: 1
         image:
           type: ImageBlock
-          url: /images/Ca8.png
+          url: /images/wood veneer doors.webp
           altText: WPC Door
         actions:
           - type: Action
@@ -224,7 +224,7 @@ sections:
         split: true
         image:
           type: ImageBlock
-          url: /images/Ca4.png
+          url: /images/pooja room teak wood doors.webp
           altText: Pooja Room Doors
         actions:
           - type: Action
@@ -355,35 +355,35 @@ sections:
       - id: reza
         title: Classic Minimal Wooden Frame
         description: Sophisticated grid-patterned Nilavu design, perfect for modern interiors seeking a traditional touch.
-        image: /images/A2.png
+        image: /images/wood frame for door.webp
         alt: Classic Minimal Wooden Frame
         highlight: false
 
       - id: elements-1
         title: Royal Floral Carved Frame
         description: Grand Dravidian-style artistry featuring intricate floral motifs and a majestic Lakshmi crest.
-        image: /images/A5.png
+        image: /images/wooden door with frame price 1.webp
         alt: Elements Door Design
         highlight: false
 
       - id: elements-2
         title: Temple Style Grand Frame
         description: Exquisite craftsmanship with tiered temple carvings that create a spiritual and elegant aura.
-        image: /images/A1.png
+        image: /images/wooden door frame.webp
         alt: Elements Wooden Door
         highlight: false
 
       - id: elements-3
         title: Heritage Arch Wooden Frame
         description: Timeless South Indian heritage featuring a distinctive inner arch and Ganesha center carving.
-        image: /images/A6.png
+        image: /images/teak wood door frame.webp
         alt: Elements Premium Door
         highlight: false
 
       - id: elements-4
         title: Premium Traditional Wooden Frame
         description: Robust, high-quality frame adorned with continuous decorative carvings and a deep grain finish.
-        image: /images/A3.png
+        image: /images/wooden door and frame.webp
         alt: Elements Premium Door
         highlight: false
 
@@ -426,7 +426,7 @@ sections:
             Timber harvested responsibly from managed forests
             under strict sustainability guidelines.
           icon: tree/*disabled for now
-          image: /images/M1.png
+          image: /images/wooden doors for home.webp
           highlight: true
 
         - id: sawmill
@@ -436,7 +436,7 @@ sections:
             Logs are processed in our own saw mill, ensuring
             quality control from the very first cut.
           icon: tree/*disabled for now
-          image: /images/M2.png
+          image: /images/wooden front door.webp
           highlight: true
 
         - id: seasoning
@@ -446,7 +446,7 @@ sections:
             Natural and kiln seasoning ensures strength,
             durability, and moisture balance.
           icon: tree/*disabled for now
-          image: /images/M3.png
+          image: /images/carving machine for wood.webp
           highlight: true
 
         - id: processing
@@ -456,7 +456,7 @@ sections:
             Advanced machinery delivers consistent dimensions
             and flawless finishing.
           icon: tree/*disabled for now
-          image: /images/M4.png
+          image: /images/wooden house doors.webp
           highlight: true
 
         - id: factory
@@ -466,7 +466,7 @@ sections:
             Final products move directly from our factory
             to your project — no middlemen.
           icon: tree/*disabled for now
-          image: /images/M5.png
+          image: /images/polished wooden doors.webp
           highlight: true
 
     proofBar:
@@ -503,7 +503,7 @@ sections:
         - id: Step1
           title: Finishing & Quality Check
           subtitle: Doors are polished and inspected for strength.
-          image: /images/p1.png
+          image: /images/door suppliers near me.webp
           highlight: true
 
         - id: Step2
@@ -512,7 +512,7 @@ sections:
           subtitle: >
             Secure transport and site readiness verification.
           icon: tree/*disabled for now
-          image: /images/p2.png
+          image: /images/mahogany wood door price.webp
           highlight: true
 
         - id: Step3
@@ -521,7 +521,7 @@ sections:
           subtitle: >
             Precise alignment and professional fitting.
           icon: tree/*disabled for now
-          image: /images/p3.png
+          image: /images/wood door with window.webp
           highlight: true
 
   - type: TestimonialCarousel

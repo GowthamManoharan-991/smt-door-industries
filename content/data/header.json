@@ -106,9 +106,9 @@
         },
        
         {
-            "label": "Furnitures",
-            "altText": "furniture page",
-            "url": "/furnitures",
+            "label": "UPVC Windows & Doors",
+            "altText": "UPVC Windows and UPVC Doors",
+            "url": "/upvc-doors-and-windows",
             "icon": "arrowRight",
             "iconPosition": "right",
             "style": "secondary",
@@ -212,7 +212,7 @@
   "type": "SubNav"
 },
         {
-            "label": "About Us",
+            "label": "About",
             "altText": "About Us",
             "url": "/about-us",
             "icon": "arrowRight",
