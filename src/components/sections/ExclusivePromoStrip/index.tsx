@@ -27,31 +27,31 @@ export default function ExclusivePromoStrip({
   secondaryCta
 }: ExclusivePromoStripProps) {
   return (
-    /* FIXED: Drastically reduced padding on the white section background container */
     <section className="relative bg-white py-8 md:py-10 overflow-visible">
       
       {/* Yellow strip container padding and heights remain exactly the same as your image */}
-      <div className="w-full bg-[#F59E0F] py-8 md:py-10 px-4 sm:px-6 lg:px-8 relative min-h-[220px] flex items-center">
+      <div className="w-full bg-[#F59E0F] py-8 md:py-10 px-4 sm:px-6 lg:px-6 relative min-h-[220px] flex items-center overflow-visible">
         
         {/* The grid is shifted relative to its layout box to let the image overhang beautifully */}
         <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative">
           
-          {/* LEFT COLUMN: The Perfectly Centered Pop-Out Image (3 out of 12 cols) */}
-          <div className="lg:col-span-3 relative flex justify-center lg:justify-start">
+          {/* LEFT COLUMN: Expanded from col-span-3 to col-span-4 to allow a much larger image size footprint */}
+          <div className="lg:col-span-4 relative flex justify-center lg:justify-start items-center">
             {image && (
-              /* lg:-my-24 extends the bounding box vertically on desktop so it pops out of both sides evenly */
-              <div className="w-full max-w-[260px] lg:-my-24 z-10 transform transition-transform duration-300">
+              /* lg:-my-32 extends the bounding box vertically further on desktop to support the increased height */
+              <div className="w-full max-w-[360px] lg:max-w-full lg:-my-32 z-10 transform transition-transform duration-300">
                 <img 
                   src={image.url} 
                   alt={image.altText || "Featured Product Door Frame"} 
-                  className="w-full h-auto block bg-transparent"
+                  className="w-full h-auto max-h-[500px] lg:max-h-[480px] block bg-transparent object-contain"
+                  loading="lazy"
                 />
               </div>
             )}
           </div>
 
-          {/* MIDDLE COLUMN: Text Heading & Explainer Subcopy (5 out of 12 cols) */}
-          <div className="lg:col-span-5 text-slate-950 space-y-4 text-center lg:text-left lg:pl-10">
+          {/* MIDDLE COLUMN: Shifted from col-span-5 to col-span-4 to keep layout columns perfectly balanced */}
+          <div className="lg:col-span-4 text-slate-950 space-y-4 text-center lg:text-left lg:pl-6">
             <h2 className="text-2xl sm:text-2xl md:text-3xl font-extrabold tracking-[0.02em] leading-[1.4]">
               {title}
             </h2>

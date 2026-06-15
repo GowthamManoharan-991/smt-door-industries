@@ -82,7 +82,7 @@ export default function PremiumAsymmetricAbout({
         <div className="lg:col-span-5 space-y-6 lg:pl-6 mt-10 lg:mt-0">
           <div className="space-y-2">
             <span className="text-amber-500 font-bold tracking-widest text-xs uppercase block">{badge}</span>
-            <h2 className="text-3xl sm:text-3xl lg:text-[36px] leading-[1.2] sm:leading-[1.25] mt-2 font-semibold text-[#4A4A4A] tracking-tight ">{title}</h2>
+            <h2 className="text-3xl sm:text-3xl lg:text-[28px] leading-[1.2] sm:leading-[1.25] mt-2 font-semibold text-[#4A4A4A] tracking-normal ">{title}</h2>
           </div>
           <p className="text-gray-600 text-[16px] sm:text-[14px] lg:text-[15px] leading-relaxed my-4">
   {description}
@@ -130,7 +130,7 @@ export default function PremiumAsymmetricAbout({
           <p className="text-[10px] sm:text-xs font-bold text-slate-400 uppercase tracking-wide truncate">
             {metric.label}
           </p>
-          <p className="text-xl sm:text-2xl font-black text-slate-900 leading-tight mt-0.5">
+          <p className="text-xs sm:text-2xl font-black text-slate-900 leading-tight mt-0.5">
             {metric.value}
           </p>
         </div>

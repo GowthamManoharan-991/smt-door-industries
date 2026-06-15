@@ -15,7 +15,7 @@ sections:
       machinery, delivering absolute structural integrity and luxury craftsmanship.
     image:
       type: ImageBlock
-      url: /images/Hero1.png
+      url: /images/timber/wood front door.webp
       altText: Premium Wooden Doors
     colors: bg-dark-fg-light
     styles:
@@ -36,10 +36,10 @@ sections:
       SMT Door Industries has been transforming raw timber into architectural masterpieces since 2000. By owning the entire process—from our saw mills to precision machinery—we eliminate middlemen to deliver absolute structural integrity and luxury directly to you.
     images:
       - type: ImageBlock
-        url: /images/door.png
+        url: /images/polished wooden doors.webp
         altText: Modern luxury interior showcase
       - type: ImageBlock
-        url: /images/wood-entrance-doors.jpeg
+        url: /images/wood window.webp
         altText: Premium handcrafted door detail
     features:
       - text: Vertically Integrated Timber & Saw Mill
@@ -83,7 +83,7 @@ sections:
     subtitle: >
       Partner with an independent manufacturer dedicated to absolute precision. 
       From raw logs to finished premium architectural setups, we handle everything internally.
-    centerImageUrl: /images/Ca3.png
+    centerImageUrl: /images/wooden center table.webp
     centerImageAlt: Premium wood framework architectural mockup
     leftServices:
       - title: Timber & Saw Mill Sourcing
@@ -116,7 +116,7 @@ sections:
     elementId: home-faq-panel
     badge: WHY SMT INDUSTRIES?
     title: Frequently Asked Questions About Our Manufacturing
-    imageUrl: /images/door.png
+    imageUrl: /images/wood door with window.webp
     imageAlt: Smart keyless entry lock integration
     primaryCta:
       label: READ MORE
@@ -142,7 +142,7 @@ sections:
       custom sizes, raw wood processing options, or tailored wholesale pricing models.
     image:
       type: ImageBlock
-      url: /images/Ca5.png
+      url: /images/wooden window frames 1.webp
       altText: Exclusive Handcrafted Dark Wooden Frame Door
     primaryCta:
       label: Contact Our Experts
