@@ -5,7 +5,7 @@ sections:
   - type: HeroSection
     elementId: hero-section
     slides:
-      - image: /images/Hero1.png
+      - image: /images/Hero1.webp
         tag: PREMIUM
         title: Designing a Home, Creating a Living
         subtitle: Your home deserves the best design.
@@ -15,45 +15,45 @@ sections:
           - label: Learn More
             url: '#product-catalog'
 
-      - image: /images/Hero2.png
+      - image: /images/Hero2.webp
         tag: CRAFTED
         title: Elegant Interiors Crafted with Care
         subtitle: Beautiful interiors crafted with precision and care.
         actions:
           - label: Contact Now
-            url: /
+            url: "https://wa.me/919791974780?text=Hi,%20I'm%20interested%20in%20your%20custom%20doors%20and%20windows."
           - label: Learn More
-            url: /
+            url: '#product-catalog'
 
-      - image: /images/Hero3.png
+      - image: /images/Hero3.webp
         tag: BESPOKE
         title: Spaces That Reflect Your Lifestyle
         subtitle: Smart, modern, and functional home designs.
         actions:
           - label: Contact Now
-            url: /
+            url: "https://wa.me/919791974780?text=Hi,%20I'm%20interested%20in%20your%20custom%20doors%20and%20windows."
           - label: Learn More
-            url: /
+            url: '#product-catalog'
 
-      - image: /images/Hero4.png
+      - image: /images/Hero4.webp
         tag: ENGINEERED
         title: Where Comfort Meets Style
         subtitle: Thoughtfully designed interiors for modern living.
         actions:
           - label: Contact Now
-            url: /
+            url: "https://wa.me/919791974780?text=Hi,%20I'm%20interested%20in%20your%20custom%20doors%20and%20windows."
           - label: Learn More
-            url: /
+            url: '#product-catalog'
 
-      - image: /images/Hero5.png
+      - image: /images/Hero5.webp
         tag: HERITAGE
         title: Turn Your Dream Home into Reality
         subtitle: Premium designs tailored just for you.
         actions:
           - label: Contact Now
-            url: /
+            url: "https://wa.me/919791974780?text=Hi,%20I'm%20interested%20in%20your%20custom%20doors%20and%20windows."
           - label: Learn More
-            url: /
+            url: '#product-catalog'
 
     colors: bg-none-fg-light
 
@@ -163,7 +163,7 @@ sections:
           - type: Action
             label: Shop Now
             style: primary
-            url: //teak-wooden-doors
+            url: /teak-wooden-doors
 
       - title: Mahogany Wood Doors
         subtitle: Main Entrance Doors
@@ -203,7 +203,7 @@ sections:
           - type: Action
             label: Shop Now
             style: primary
-            url: /upvc-doors
+            url: /upvc-doors-and-windows
 
       - title: WPC Doors
         subtitle: Waterproof Bathroom Doors
@@ -216,7 +216,7 @@ sections:
           - type: Action
             label: Shop Now
             style: primary
-            url: /wpc-door
+            url: /wpc-doors
 
       - title: Pooja Room Doors
         subtitle: Teak door with brass patterns and small bells (mani)

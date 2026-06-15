@@ -14,12 +14,18 @@ export default function HeroSubPages({
   showFeatures = true,
   titleClassName, 
   extraHeightClass,
-  actions // New array prop to handle CTA buttons dynamically
+  actions, 
+  hideOverlay = false 
 }) {
+  
+  // 🎯 Safely isolate style updates to the hardware page based on the title prop
+  const isHardwarePage = hideOverlay || (title && title.toLowerCase().includes('hardware'));
+
   return (
     <section
       className={classNames(
-        "relative flex items-center px-6 sm:px-10 lg:px-24 text-white bg-neutral-700",
+        "relative flex items-center px-6 sm:px-10 lg:px-24",
+        isHardwarePage ? "text-neutral-800" : "text-white bg-neutral-700",
         extraHeightClass ? extraHeightClass : "min-h-[420px] lg:min-h-[65vh] py-16 lg:py-0"
       )}
     >
@@ -28,27 +34,29 @@ export default function HeroSubPages({
           <img
             src={image.url}
             alt={image.altText || ''}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-black/30" />
+          {!isHardwarePage && (
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/50 to-black/30" />
+          )}
         </div>
       )}
 
       <div className="w-full max-w-7xl mx-auto">
-        <div 
-          className={classNames(
-            "grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-16"
-          )}
-        >
-          {/* Left Side */}
+        <div className={classNames("grid grid-cols-1 lg:grid-cols-2 items-center gap-4 lg:gap-16")}>
+          
+          {/* Left Side Content */}
           <div>
             <h1 className={classNames(
               "font-bold mb-3 lg:mb-6 leading-[1.15] lg:leading-[1.2]",
-              titleClassName ? titleClassName : "text-4xl lg:text-6xl"
+              titleClassName ? titleClassName : (isHardwarePage ? "text-neutral-500 text-4xl lg:text-5xl" : "text-4xl lg:text-5xl")
             )}>
               {title}
             </h1>
-            <p className="text-base lg:text-lg opacity-80 max-w-xl mb-6">
+            <p className={classNames(
+              "text-sm lg:text-base max-w-xl tracking-wide leading-relaxed mb-6",
+              isHardwarePage ? "text-neutral-600 font-medium" : "opacity-80"
+            )}>
               {subtitle}
             </p>
 
@@ -62,10 +70,12 @@ export default function HeroSubPages({
                       key={idx}
                       href={action.url || '#'}
                       className={classNames(
-                        "px-6 py-3 rounded-lg font-medium transition-all text-sm tracking-wide inline-block",
+                        // Keeping original sizing, tracking, and weight intact
+                        "px-6 py-3 rounded-lg font-medium transition-all text-sm tracking-wide inline-block shadow-sm",
+                        // Only swapping color values based on context
                         isFilled 
-                          ? "bg-white text-black hover:bg-neutral-200" // Filled button styling
-                          : "border border-white text-white hover:bg-white/10" // Outline button styling
+                          ? (isHardwarePage ? "bg-black/85 text-white hover:bg-neutral-800" : "bg-white text-black hover:bg-neutral-200")
+                          : (isHardwarePage ? "border border-black/50 text-black/80 hover:bg-black/5" : "border border-white text-white hover:bg-white/10")
                       )}
                     >
                       {action.label}
@@ -78,7 +88,12 @@ export default function HeroSubPages({
           
           {/* Right card */}
           {showFeatures ? (
-            <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl p-5 lg:p-10 max-w-md lg:ml-auto mx-auto lg:mx-0 mt-2 lg:mt-0">
+            <div className={classNames(
+              "backdrop-blur-xl border rounded-2xl p-5 lg:p-10 max-w-md lg:ml-auto mx-auto lg:mx-0 mt-2 lg:mt-0",
+              isHardwarePage 
+                ? "bg-black/5 border-black/6 text-neutral-800" 
+                : "bg-white/10 border border-white/20 text-white"
+            )}>
               <p className="text-xs tracking-widest uppercase opacity-70 mb-4">
                 {cardBadge || 'Features'}
               </p>

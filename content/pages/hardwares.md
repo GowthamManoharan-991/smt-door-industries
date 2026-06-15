@@ -4,15 +4,27 @@ slug: /hardwares
 
 sections:
   - type: HeroSubpages
-    elementId: doors-hero
-    title: Premium Doors Collection
+    elementId: hardwares-hero
+    title: Premium Hardware Collection
     subtitle: >
-      Explore our finest teak wood doors crafted for luxury interiors.
+      Discover engineered security and exquisite finishes designed to perfectly complement luxury interiors.
+    showFeatures: false
+    hideOverlay: true
+    extraHeightClass: 'min-h-[500px] lg:min-h-[87vh] py-24 lg:py-0'
     image:
       type: ImageBlock
-      url: /images/Hero1.png
-      altText: Premium Wooden Doors
+      url: /images/hardwares/Door Hardwares1.webp
+      altText: Premium Architectural Hardware and Door Fittings
     colors: bg-dark-fg-light
+
+    actions:
+      - label: 'Know More'
+        url: '#hardware-showcase'
+        variant: 'filled'
+      - label: 'Contact Us'
+        url: 'tel:+919791974780'
+        variant: 'outline'
+
     styles:
       self:
         minHeight: 50vh
@@ -23,40 +35,52 @@ sections:
           - pr-8
         textAlign: center
 
-  - type: ProductTeak
-    elementId: teak-showcase
+  - type: HardwareGrid
+    elementId: hardware-showcase
     background: white
-    height: half
+    height: auto
 
     products:
-      - model: TK-101
-        image: /images/Ca3.png
+      - model: Locks
+        image: /images/hardwares/door locks.webp
+        tagline: 'Security Meets Sophistication'
 
-      - model: TK-102
-        image: /images/Ca3.png
+      - model: Handles
+        image: /images/hardwares/door handles.webp
+        tagline: 'Elegant Grips for Grand Entrances'
 
-      - model: TK-103
-        image: /images/Ca3.png
+      - model: Hinges
+        image: /images/hardwares/hinges.webp
+        tagline: 'Seamless, Silent Structural Precision'
 
-      - model: TK-104
-        image: /images/Ca3.png
+      - model: Tower Bolt
+        image: /images/hardwares/towerbolt.webp
+        tagline: 'Traditional Reinforcement Reinvented'
 
-      - model: TK-101
-        image: /images/Ca3.png
+      - model: Aldrop
+        image: /images/hardwares/aldrop.webp
+        tagline: 'Heavy Security Lockpoints'
 
-      - model: TK-102
-        image: /images/Ca3.png
+      - model: Lens
+        image: /images/hardwares/door lens.webp
+        tagline: 'Wide-Angle High-Definition Viewers'
 
-      - model: TK-103
-        image: /images/Ca3.png
+      - model: Door Stopper
+        image: /images/hardwares/door stopper.webp
+        tagline: 'Premium Magnetic & Cushion Protectors'
 
-      - model: TK-104
-        image: /images/Ca3.png
+      - model: Safety Latch
+        image: /images/hardwares/safety latch.webp
+        tagline: 'Secondary Protection Essentials'
+
+      - model: Others
+        image: /images/hardwares/hardwares.webp
+        tagline: 'Custom Specialized Door Fittings'
 
 seo:
-  metaTitle: Hardwares | Premium Hardwares
-  metaDescription: Premium teak wood doors with modern 3D design and luxury finish.
-  socialImage: /images/doors-hero.jpg
+  metaTitle: Premium Door Hardwares & Fittings | SMT Door Industries
+  metaDescription: Enhance your luxury doors with our finest collection of high-durability locks, designer handles, heavy duty hinges, and architectural accents.
+  socialImage: /images/hardware-hero.jpg
   type: Seo
 
 type: PageLayout

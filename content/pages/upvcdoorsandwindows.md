@@ -5,12 +5,12 @@ slug: /upvc-doors-and-windows
 sections:
   - type: HeroSubpages
     elementId: upvc-hero
-    title: UPVC Windows and Doors
+    title: UPVC Windows and UPVC Doors
     subtitle: >
       Explore our finest range of durable UPVC doors and UPVC windows crafted for modern interiors.
     showFeatures: false
     titleClassName: 'text-3xl lg:text-5xl'
-    extraHeightClass: 'min-h-[500px] lg:min-h-[75vh] py-24 lg:py-0'
+    extraHeightClass: 'min-h-[500px] lg:min-h-[80vh] py-24 lg:py-0'
     image:
       type: ImageBlock
       url: /images/upvc windows and doors 2.webp

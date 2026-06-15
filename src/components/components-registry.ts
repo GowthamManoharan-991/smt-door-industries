@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import { ComponentType } from 'react';
 import DoorInstallationProcess from './sections/DoorInstallationProcess';
 import ScrollToTop from './ScrollToTop';
+import HardwareGrid from './sections/HardwareGrid';
 
 
 
@@ -71,6 +72,13 @@ const components = {
     AnatomyBreakdownSection: dynamic(() => import('./sections/AnatomyBreakdownSection')),
     InteractiveConfiguratorSection: dynamic(() => import('./sections/InteractiveConfiguratorSection')),
     ManufacturingProcessSection: dynamic(() => import('./sections/ManufacturingProcessSection')),
+    HardwareGrid: dynamic(() => import('./sections/HardwareGrid')),
+    TimberHeroSection: dynamic(() => import('./sections/TimberHeroSection')),
+    ValueBadgesSection: dynamic(() => import('./sections/ValueBadgesSection')),
+    CoreProcessingSection: dynamic(() => import('./sections/CoreProcessingSection')),
+    ArchitecturalProductsSection: dynamic(() => import('./sections/ArchitecturalProductsSection')),
+    FurnitureShowcaseSection: dynamic(() => import('./sections/FurnitureShowcaseSection')),
+    PortfolioShowcaseSection: dynamic(() => import('./sections/PortfolioShowcaseSection')),
     ScrollToTop: dynamic(() => import('./ScrollToTop')),
     FormBlock: dynamic(() => import('./blocks/FormBlock')),
     GenericSection: dynamic(() => import('./sections/GenericSection')),

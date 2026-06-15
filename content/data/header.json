@@ -123,94 +123,16 @@
             "style": "secondary",
             "type": "Link"
         },
-         {
-  "label": "Hardwares",
-  "altText": "Dropdown",
-  "links": [
-    {
-      "label": "Locks",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Handles",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Hinges",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Tower Bolt",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Aldrop",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Ornaments",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Lens",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Door Stopper",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Safety Latch",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    },
-    {
-      "label": "Others",
-      "url": "/",
-      "icon": "arrowRight",
-      "iconPosition": "right",
-      "style": "secondary",
-      "type": "Link"
-    }
-  ],
-  "labelStyle": "secondary",
-  "type": "SubNav"
-},
+         
+{
+            "label": "Hardwares",
+            "altText": "Hardwares",
+            "url": "/hardwares",
+            "icon": "arrowRight",
+            "iconPosition": "right",
+            "style": "secondary",
+            "type": "Link"
+        },
         {
             "label": "About",
             "altText": "About Us",
