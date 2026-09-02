@@ -1,10 +1,11 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY!);
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
+
 export async function POST(req: Request) {
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy_key");
     const body = await req.json();
 
     const { name, email, phone, doorCategory, windowCategory, hardwareCategory } = body;
@@ -18,7 +19,6 @@ export async function POST(req: Request) {
     /* ========================= 
        1️⃣ Email to You
     ========================== */
-
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: ["gow99tham991@gmail.com"],
@@ -28,9 +28,9 @@ export async function POST(req: Request) {
       <p><b>Name:</b> ${name}</p>
       <p><b>Email:</b> ${email}</p>
       <p><b>Phone:</b> ${phone}</p>
-      <p><b>Door Category:</b> ${doorCategory}</p>
-      <p><b>Window Category:</b> ${windowCategory}</p>
-      <p><b>Hardware Category:</b> ${hardwareCategory}</p>
+      <p><b>Door Category:</b> ${doorSelected}</p>
+      <p><b>Window Category:</b> ${windowSelected}</p>
+      <p><b>Hardware Category:</b> ${hardwareSelected}</p>
       `,
     });
 
@@ -38,7 +38,7 @@ export async function POST(req: Request) {
        2️⃣ Auto Reply to Customer
     ========================== */
     await resend.emails.send({
-      from: "onboarding@resend.dev", // Once domain is verified change to "info@smtdoorindustries.com"
+      from: "onboarding@resend.dev",
       to: [email],
       subject: "Thank you for contacting SMT Door Industries",
       html: `
@@ -62,37 +62,37 @@ export async function POST(req: Request) {
     /* =========================
        3️⃣ WhatsApp Notification (Meta API)
     ========================== */
-
-    await fetch(`https://graph.facebook.com/v18.0/${process.env.META_PHONE_NUMBER_ID}/messages`, {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${process.env.META_ACCESS_TOKEN}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        messaging_product: "whatsapp",
-        to: process.env.MY_WHATSAPP_NUMBER,
-        type: "template",
-        template: {
-          name: "smt_door_new_lead", // your approved template name
-          language: { code: "en" },
-          components: [
-            {
-              type: "body",
-              parameters: [
-                { type: "text", parameter_name: "customer_name", text: name },
-                { type: "text", parameter_name: "customer_email", text: email },
-                { type: "text", parameter_name: "customer_phone", text: phone },
-                { type: "text", parameter_name: "category", text: summaryCategoryText }
-              ]
-            }
-          ]
-        }
-      })
-    });
+    if (process.env.META_PHONE_NUMBER_ID && process.env.META_ACCESS_TOKEN && process.env.MY_WHATSAPP_NUMBER) {
+      await fetch(`https://graph.facebook.com/v18.0/${process.env.META_PHONE_NUMBER_ID}/messages`, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.META_ACCESS_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messaging_product: "whatsapp",
+          to: process.env.MY_WHATSAPP_NUMBER,
+          type: "template",
+          template: {
+            name: "smt_door_new_lead",
+            language: { code: "en" },
+            components: [
+              {
+                type: "body",
+                parameters: [
+                  { type: "text", parameter_name: "customer_name", text: name },
+                  { type: "text", parameter_name: "customer_email", text: email },
+                  { type: "text", parameter_name: "customer_phone", text: phone },
+                  { type: "text", parameter_name: "category", text: summaryCategoryText },
+                ],
+              },
+            ],
+          },
+        }),
+      });
+    }
 
     return NextResponse.json({ success: true });
-
   } catch (error) {
     console.error("API Error:", error);
     return NextResponse.json({ success: false });
